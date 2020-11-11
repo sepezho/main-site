@@ -1,0 +1,23 @@
+.LinksContainer
+  float: left
+  display: flex
+  flex-direction: column
+  justify-content: start
+  width: 85px
+
+.LinksImg
+  width: 30px
+  height: 30px
+  filter: invert(0)
+
+  &:hover
+    margin-left: 2px
+
+@media screen and (max-width: 950px)
+  .LinksContainer
+    width: 27px
+    margin-top: 30px
+
+  .LinksImg
+    width: 25px
+    height: 25px

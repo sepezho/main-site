@@ -1,0 +1,60 @@
+@import 'src/Style/MainVar.sass'
+
+.SliderContainerMain
+  width: 300px
+  height: 300px
+  float: right
+  display: flex
+  margin-left: 50px
+  flex-direction: row-reverse
+
+img
+  width: 300px
+  height: 300px
+
+.SliderContainerItem
+  -webkit-border-radius: 10px !important
+  -moz-border-radius: 10px !important
+  border-radius: 10px !important
+  -webkit-transition: .3s
+  transition: .3s
+  width: 300px
+  height: 300px
+  box-shadow: 0px 0px 40px 10px $shadowSlider
+  overflow: hidden
+
+.SliderContainer
+  perspective: 100px
+  transform-style: preserve-3d
+
+.Title
+  font-family: 'Gilroy BlackItalic'
+  font-size: 40pt
+  transform: rotate(90deg)
+  margin-left: -220px
+  color: #ff7070
+  float: right
+
+@media screen and (max-width: 950px)
+  .Title
+    transform: rotate(90deg)
+    right: 100px
+    top: 375px
+
+  .SliderContainerItem, img
+    width: 250px
+    height: 250px
+
+  .SliderContainerMain
+    width: 250px
+    height: 250px
+    flex-direction: column
+    margin-bottom: 50px
+    margin-left: 0
+
+  .Title
+    font-size: 36pt
+    transform: rotate(0deg)
+    margin-left: 0
+    float: none
+    margin-bottom: 20px
