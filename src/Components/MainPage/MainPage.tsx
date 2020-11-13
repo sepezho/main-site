@@ -5,6 +5,8 @@ import Text from './Text/Text';
 import Slider from './Slider/Slider';
 
 import s from './Style/MainPage.module.sass'
+import UpdateImgs from "src/Logics/UpdateImgs/UpdateImgs";
+import {Switch} from "react-router-dom";
 
 const MainPage: React.FC = () => {
   return (
@@ -16,6 +18,7 @@ const MainPage: React.FC = () => {
                 <Slider />
             </div>
         </div>
+      <UpdateImgs />
     </div>
   );
 }

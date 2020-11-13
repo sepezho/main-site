@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react';
 
-import SrcGithub from 'src/Static/Img/Icons/GitHub.png';
-import SrcStackOverflow from 'src/Static/Img/Icons/StackOverflow.png';
-import Codewars from 'src/Static/Img/Icons/Codewars.png';
-import SrcTelegram from 'src/Static/Img/Icons/Telegram.png';
-import SrcVk from 'src/Static/Img/Icons/Vk.png';
-import SrcInst from 'src/Static/Img/Icons/Inst.png';
-import SrcYouTube from 'src/Static/Img/Icons/YouTube.png';
+import SrcGithub from 'src/Static/Img/Icons/Sidebar/GitHub.png';
+import SrcStackOverflow from 'src/Static/Img/Icons/Sidebar/StackOverflow.png';
+import Codewars from 'src/Static/Img/Icons/Sidebar/Codewars.png';
+import SrcTelegram from 'src/Static/Img/Icons/Sidebar/Telegram.png';
+import SrcVk from 'src/Static/Img/Icons/Sidebar/Vk.png';
+import SrcInst from 'src/Static/Img/Icons/Sidebar/Inst.png';
+import SrcYouTube from 'src/Static/Img/Icons/Sidebar/YouTube.png';
+
 import s from './Style/Links.module.sass';
 
 const items = [

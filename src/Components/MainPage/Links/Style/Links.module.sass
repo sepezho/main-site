@@ -16,6 +16,17 @@
     &:hover
       margin-left: 5px
 
+.activeImg
+  transition: 0
+  animation: rotate3d 5s linear
+
+@keyframes rotate3d
+  from
+    transform: rotate3d(0, 1, 0, 0)
+
+  to
+    transform: rotate3d(0, 1, 0, 360deg)
+
 @media screen and (max-width: 950px)
   .LinksContainer
     width: 27px
@@ -24,15 +35,3 @@
   .LinksImg
     width: 25px
     height: 25px
-
-.activeImg
-  transition: 0
-  animation: rotate3d 5s linear
-
-
-@keyframes rotate3d
-  from
-    transform: rotate3d(0, 1, 0, 0)
-
-  to
-    transform: rotate3d(0, 1, 0, 360deg)

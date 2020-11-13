@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import SrcGithub from 'src/Static/Img/Icons/GitHub.png';
+import SrcStackOverflow from 'src/Static/Img/Icons/StackOverflow.png';
+import Codewars from 'src/Static/Img/Icons/Codewars.png';
+import SrcTelegram from 'src/Static/Img/Icons/Telegram.png';
+import SrcVk from 'src/Static/Img/Icons/Vk.png';
+import SrcInst from 'src/Static/Img/Icons/Inst.png';
+import SrcYouTube from 'src/Static/Img/Icons/YouTube.png';
 import s from './Style/Links.module.sass';
-import SrcGithub from "src/Static/Img/Icons/GitHub.png";
-import SrcStackOverflow from "src/Static/Img/Icons/StackOverflow.png";
-import Codewars from "src/Static/Img/Icons/Codewars.png";
-import SrcTelegram from "src/Static/Img/Icons/Telegram.png";
-import SrcVk from "src/Static/Img/Icons/Vk.png";
-import SrcInst from "src/Static/Img/Icons/Inst.png";
-import SrcYouTube from "src/Static/Img/Icons/YouTube.png";
 const items = [
     { href: 'https://t.me/sepezho_log', src: SrcTelegram, isActive: false },
     { href: 'https://www.instagram.com/sepezho', src: SrcInst, isActive: false },
@@ -16,24 +16,27 @@ const items = [
     { href: 'https://stackoverflow.com/users/12073046/sepezho', src: SrcStackOverflow, isActive: false },
     { href: 'https://www.codewars.com/users/sepezho', src: Codewars, isActive: false },
 ];
-const Links = React.memo(() => {
+const Links = () => {
     const [itemsState, setItemsState] = useState(items);
-    console.log('rerender');
     useEffect(() => {
         let oldElement = 0;
-        let interval = setInterval(() => {
+        const interval = setInterval(() => {
             const newItems = [...items];
             newItems[oldElement].isActive = false;
-            oldElement = Math.floor(Math.random() * items.length);
-            newItems[oldElement].isActive = true;
+            let newElement = Math.floor(Math.random() * items.length);
+            while (oldElement === newElement) {
+                newElement = Math.floor(Math.random() * items.length);
+            }
+            oldElement = newElement;
+            newItems[newElement].isActive = true;
             setItemsState(newItems);
-        }, 10000);
+        }, 6000);
         return () => {
             clearInterval(interval);
         };
     }, [items]);
     return (React.createElement("div", { className: s.LinksContainer }, itemsState.map((item) => (React.createElement("a", { href: item.href, key: item.href },
         React.createElement("img", { src: item.src, className: item.isActive ? s.activeImg : '', alt: "" }))))));
-});
+};
 export default Links;
 //# sourceMappingURL=Links.js.map

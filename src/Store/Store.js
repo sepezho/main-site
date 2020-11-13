@@ -1,4 +1,4 @@
 import { createStore } from 'redux';
-import { exchangeReducer, initialState } from './ExchangeReducer';
-export const store = createStore(exchangeReducer, initialState);
+import { imgReducer, initialState } from './ImgReducer';
+export const store = createStore(imgReducer, initialState);
 //# sourceMappingURL=Store.js.map

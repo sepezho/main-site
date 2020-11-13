@@ -1,4 +1,4 @@
 import { createStore } from 'redux'
-import { exchangeReducer, initialState } from './ExchangeReducer'
+import { imgReducer, initialState } from './ImgReducer'
 
-export const store = createStore(exchangeReducer, initialState)
+export const store = createStore(imgReducer, initialState)
