@@ -2,7 +2,6 @@
 // Please do not change this file!
 interface CssExports {
   'LinksContainer': string;
-  'LinksImg': string;
   'activeImg': string;
   'rotate3d': string;
 }

@@ -8,21 +8,37 @@
   margin-left: 50px
   flex-direction: row-reverse
 
-img
-  width: 300px
-  height: 300px
-
+.SliderContainer
+  perspective: 70px
+  transform-style: preserve-3d
 
 .SliderContainerItem
-  -webkit-border-radius: 10px !important
-  -moz-border-radius: 10px !important
-  border-radius: 10px !important
+  -webkit-border-radius: 10px
+  -moz-border-radius: 10px
+  border-radius: 10px
   -webkit-transition: .3s
   transition: .3s
   width: 300px
   height: 300px
   box-shadow: 0px 0px 40px 10px $shadowSlider
   overflow: hidden
+  img
+    width: 300px
+    height: 300px
+  ul
+    width: 100%
+    bottom: 5px
+    filter: invert($invertIcons)
+    li
+      margin: 0
+
+.Title
+  font-family: 'Gilroy BlackItalic'
+  font-size: 40pt
+  transform: rotate(90deg)
+  margin-left: -180px
+  color: #ff7070
+  float: right
 
 .WaitingSlide
   //display: flex
@@ -64,7 +80,7 @@ img
       margin-bottom: 5px
       >
         span
-          background: black
+          background: rgba(0, 0, 0, 0.4)
           max-width: 200px
           color: white
           padding: 2px 5px 2px 5px
@@ -74,7 +90,7 @@ img
         img
           filter: invert($invertIcons)
           border-radius: 3px
-          background: white
+          background: rgba(255, 255, 255, 0.4)
           width: 16px
           height: 16px
           margin: 0 10px 0 0
@@ -82,43 +98,20 @@ img
 
 .SliderNote
   position: absolute
-  bottom: 20px
+  bottom: 30px
   > div
     margin-bottom: 0
 
-
-.SliderContainer
-  perspective: 70px
-  transform-style: preserve-3d
-
-.Title
-  font-family: 'Gilroy BlackItalic'
-  font-size: 40pt
-  transform: rotate(90deg)
-  margin-left: -220px
-  color: #ff7070
-  float: right
-
 @media screen and (max-width: 950px)
-  .Title
-    transform: rotate(90deg)
-    right: 100px
-    top: 375px
-
-  .SliderContainerItem, img
-    width: 250px
-    height: 250px
-
   .SliderContainerMain
-    width: 250px
-    height: 250px
     flex-direction: column
-    margin-bottom: 50px
+    margin-bottom: 55px
+    margin-top: -10px
     margin-left: 0
 
   .Title
     font-size: 36pt
     transform: rotate(0deg)
-    margin-left: 0
+    margin: auto
     float: none
     margin-bottom: 20px

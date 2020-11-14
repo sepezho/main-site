@@ -12,10 +12,23 @@
   font-family: 'Roboto Light'
   src: url('../Static/Fonts/Roboto/Roboto-Light.ttf')
 
+@font-face
+  font-family: 'Roboto MediumItalic'
+  src: url('../Static/Fonts/Roboto/Roboto-MediumItalic.ttf')
+
+@font-face
+  font-family: 'Roboto ThinItalic'
+  src: url('../Static/Fonts/Roboto/Roboto-ThinItalic.ttf')
+
 .rotateContainer
   perspective: 1000px
   transform-style: preserve-3d
 
 body
+  margin: 0
   background: $background-color
   font-family: 'Roboto Light'
+
+::selection
+  background: black
+  color: white

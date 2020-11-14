@@ -2,39 +2,30 @@ import React, {Component, useEffect} from 'react';
 import Slider from 'react-slick';
 import { connect } from 'react-redux';
 
-import jpeg from 'src/Static/Img/1.jpg';
-import s from './Style/Slider.module.sass';
-
 import Waiting from 'src/Static/Img/Icons/Slider/Waiting.svg';
 import Heart from 'src/Static/Img/Icons/Slider/Heart.svg';
 import Comments from 'src/Static/Img/Icons/Slider/Comments.svg';
 import File from 'src/Static/Img/Icons/Slider/File.svg';
 import Calendar from 'src/Static/Img/Icons/Slider/Calendar.svg';
 
-import s from './Style/Links.module.sass';
-
-// const items = [
-//   {href: 'https://t.me/sepezho_log', src: SrcTelegram, isActive: false},
-// ];
-
-// import Card from './Paralax_module.js';
+import s from './Style/Slider.module.sass';
 
 const SliderModule: React.FC = (props) => {
   const settings = {
-    dots: false,
+    dots: true,
     arrows: false,
-    speed: 1000, //1000
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000, //5000
+    autoplaySpeed: 10000,
   };
 
   const MapImgs = (props) => {
-    if (props.imgs.graphql) {
+    if (props.imgs.edge_owner_to_timeline_media) {
       return (
         <Slider {...settings}>
-          {props.imgs.graphql?.user.edge_owner_to_timeline_media.edges.map(e => e.node).map(img => (
+          {props.imgs.edge_owner_to_timeline_media.edges.map((e) => e.node).slice(0, 10).map((img) => (
             <div key={img.id} className={s.Slide}>
               <img src={img.thumbnail_resources[4].src} className={s.Slider_img} alt="" />
               <div>
@@ -59,33 +50,30 @@ const SliderModule: React.FC = (props) => {
                 <div className={s.SliderNote}>
                   <img src={File} alt="" />
                   <span>
-                    {img.edge_media_to_caption.edges[0]?.node.text ? img.edge_media_to_caption.edges[0]?.node.text.length >= 70 ? img.edge_media_to_caption.edges[0]?.node.text.slice(0, 70) + '...' : img.edge_media_to_caption.edges[0]?.node.text : 'Unfound note'}
+                    {img.edge_media_to_caption.edges[0]?.node.text ? img.edge_media_to_caption.edges[0]?.node.text.length >= 70 ? `${img.edge_media_to_caption.edges[0]?.node.text.slice(0, 70)}...` : img.edge_media_to_caption.edges[0]?.node.text : 'Unfound note'}
                   </span>
                 </div>
               </div>
             </div>
           ))}
         </Slider>
-      )
-    } else {
-      return (
-        <Slider {...settings} className={s.WaitingSlide}>
-          <img src={Waiting} alt="" />
-        </Slider>
-      )
+      );
     }
-  }
-// if (img) {
-  //   return
-  // }
+    return (
+      <Slider {...settings} className={s.WaitingSlide}>
+        <img src={Waiting} alt="" />
+      </Slider>
+    );
+
+  };
   return (
     <div className={s.SliderContainerMain}>
       <div className={s.Title}>
-      VLADISLAV
+        {props.imgs.username.toUpperCase()}
       </div>
       <div className={`${s.SliderContainer} rotateContainer`}>
         <div className={`${s.SliderContainerItem} rotateItem`}>
-          <MapImgs imgs = {props.imgs} />
+          <MapImgs imgs={props.imgs} />
         </div>
         <link
           rel="stylesheet"
@@ -104,28 +92,8 @@ const SliderModule: React.FC = (props) => {
 
 const UpdateImgsCatch = (state) => {
   return {
-    imgs: state.imgs,
+    imgs: state.imgs.graphql.user,
   };
 };
 
 export default connect(UpdateImgsCatch)(SliderModule);
-//id
-//display_url
-//is_video
-//edge_media_to_comment.count
-//edge_liked_by.count
-//thumbnail_resources[4].src
-//edge_media_to_caption.edges[0].node.text
-
-              //.map(e => !e.node.is_video ? e.node : null)
-              // imgs = props.imgs.graphql?.user.edge_owner_to_timeline_media.edges.map(e => !e.node.is_video ? e.node : null)
-              // console.log('-----------------------');
-              //
-              // console.log(img.id);
-              // console.log(img.is_video);
-              // console.log(img.edge_media_to_comment.count);
-              // console.log(img.edge_liked_by.count);
-              // console.log(img.thumbnail_resources[4].src);
-              // console.log(img.edge_media_to_caption.edges[0]?.node.text ? img.edge_media_to_caption.edges[0]?.node.text.length >= 100 ? img.edge_media_to_caption.edges[0]?.node.text.slice(0,100) + '...' : img.edge_media_to_caption.edges[0]?.node.text : 'NETU');
-              //
-              // console.log('-----------------------');

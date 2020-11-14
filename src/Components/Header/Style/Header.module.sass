@@ -4,21 +4,45 @@ a
   text-decoration: none
 
 .root
-  width: 270px
-  perspective: 30px
+  width: 350px
   margin: auto
+  margin-top: 50px
 
 .container
-  padding: 15px 35px 15px 35px
+  padding: 5px 35px 5px 35px
   border-radius: 100px
-  transition: .1s
-  width: 200px
+  transition: .3s
+  width: calc(100% - 70px)
   display: flex
-  flex-direction: column
-  justify-content: center
+  flex-direction: row-reverse
+  justify-content: space-around
+  align-items: center
   box-shadow: 0px 0px 40px 10px $shadow
-  // &:hover
-  //   box-shadow: 0px 0px 50px 22px $shadowHover
+  &:hover
+    box-shadow: 0px 0px 50px 22px $shadow
+  div
+    perspective: 5px
+  p
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+.waiting
+  width: 16px
+  height: 16px
+  animation: rotate 5s linear infinite
+
+@keyframes rotate
+  from
+    transform: rotate(360deg)
+  to
+    transform: rotate(0)
+
+.avatar
+  width: 64px
+  height: 64px
+  border-radius: 5px
+  box-shadow: 0px 0px 10px 5px $shadow
 
 .title
   color: $primary-color
@@ -31,3 +55,8 @@ a
   margin: -5px 0 0 70px
 
 
+@media screen and (max-width: 450px)
+  .root
+    width: 100vw
+  .container
+    border-radius: 0

@@ -11,13 +11,13 @@ import {Switch} from "react-router-dom";
 const MainPage: React.FC = () => {
   return (
     <div className={s.container}>
-        <div className={s.mainPage}>
-            <div className={s.CenterMain}>
-                <Links />
-                <Text />
-                <Slider />
-            </div>
+      <div className={s.mainPage}>
+        <div className={s.CenterMain}>
+          <Links />
+          <Text />
+          <Slider />
         </div>
+      </div>
       <UpdateImgs />
     </div>
   );

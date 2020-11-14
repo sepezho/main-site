@@ -2,6 +2,8 @@
 // Please do not change this file!
 interface CssExports {
   'TextContainer': string;
+  'coursive': string;
+  'secondaryText': string;
 }
 export const cssExports: CssExports;
 export default cssExports;

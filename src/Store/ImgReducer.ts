@@ -1,5 +1,13 @@
 export const initialState = {
   imgs: {
+    graphql: {
+      user: {
+        biography: 'loading...',
+        profile_pic_url: '',
+        full_name: 'loading...',
+        username: 'loading',
+      }
+    }
   },
 };
 
