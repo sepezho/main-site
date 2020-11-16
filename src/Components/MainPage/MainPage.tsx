@@ -1,12 +1,11 @@
 import React from 'react';
 
+import UpdateImgs from 'src/Logics/UpdateImgs/UpdateImgs';
 import Links from './Links/Links';
 import Text from './Text/Text';
 import Slider from './Slider/Slider';
 
-import s from './Style/MainPage.module.sass'
-import UpdateImgs from "src/Logics/UpdateImgs/UpdateImgs";
-import {Switch} from "react-router-dom";
+import s from './Style/MainPage.module.sass';
 
 const MainPage: React.FC = () => {
   return (
@@ -21,6 +20,6 @@ const MainPage: React.FC = () => {
       <UpdateImgs />
     </div>
   );
-}
+};
 
-export default MainPage
+export default MainPage;

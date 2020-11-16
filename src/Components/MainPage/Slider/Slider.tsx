@@ -1,4 +1,4 @@
-import React, {Component, useEffect} from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import { connect } from 'react-redux';
 
@@ -32,6 +32,7 @@ const SliderModule: React.FC = (props) => {
                 <div>
                   <img src={Calendar} alt="" />
                   <span>
+                    {/*SOME GENIUS CODE HERE :D*/}
                     {(img.accessibility_caption?.split('. ')[0].split(/([A-Z])/).reverse()[1] + img.accessibility_caption?.split('. ')[0].split(/[A-Z]/).reverse()[0]) ? img.accessibility_caption?.split('. ')[0].split(/([A-Z])/).reverse()[1] + img.accessibility_caption?.split('. ')[0].split(/[A-Z]/).reverse()[0] : 'Unfound date'}
                   </span>
                 </div>
@@ -50,6 +51,7 @@ const SliderModule: React.FC = (props) => {
                 <div className={s.SliderNote}>
                   <img src={File} alt="" />
                   <span>
+                    {/*AND HERE*/}
                     {img.edge_media_to_caption.edges[0]?.node.text ? img.edge_media_to_caption.edges[0]?.node.text.length >= 70 ? `${img.edge_media_to_caption.edges[0]?.node.text.slice(0, 70)}...` : img.edge_media_to_caption.edges[0]?.node.text : 'Unfound note'}
                   </span>
                 </div>
@@ -64,8 +66,8 @@ const SliderModule: React.FC = (props) => {
         <img src={Waiting} alt="" />
       </Slider>
     );
-
   };
+
   return (
     <div className={s.SliderContainerMain}>
       <div className={s.Title}>

@@ -11,26 +11,24 @@
   img
     width: 30px
     height: 30px
-    filter: invert($invertIcons)
+    filter: invert($invert-icons)
     transition: .2s
     &:hover
       margin-left: 5px
 
 .activeImg
-  transition: 0
+  transition: 0s
   animation: rotate3d 5s linear
 
 @keyframes rotate3d
   from
     transform: rotate3d(0, 1, 0, 0)
-
   to
     transform: rotate3d(0, 1, 0, 360deg)
 
 @media screen and (max-width: 950px)
   .LinksContainer
     width: 34px
-
     margin: 30px 0 0 0
 
 

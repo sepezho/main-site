@@ -2,7 +2,6 @@
 // Please do not change this file!
 interface CssExports {
   'container': string;
-  'createdBy': string;
   'root': string;
 }
 export const cssExports: CssExports;

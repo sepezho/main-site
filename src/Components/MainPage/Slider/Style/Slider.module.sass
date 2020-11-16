@@ -13,14 +13,11 @@
   transform-style: preserve-3d
 
 .SliderContainerItem
-  -webkit-border-radius: 10px
-  -moz-border-radius: 10px
   border-radius: 10px
-  -webkit-transition: .3s
   transition: .3s
   width: 300px
   height: 300px
-  box-shadow: 0px 0px 40px 10px $shadowSlider
+  box-shadow: 0px 0px 40px 10px $shadow-slider
   overflow: hidden
   img
     width: 300px
@@ -28,7 +25,7 @@
   ul
     width: 100%
     bottom: 5px
-    filter: invert($invertIcons)
+    filter: invert($invert-icons)
     li
       margin: 0
 
@@ -37,20 +34,14 @@
   font-size: 40pt
   transform: rotate(90deg)
   margin-left: -180px
-  color: #ff7070
+  color: $slider-title-color
   float: right
 
 .WaitingSlide
-  //display: flex
-  //align-items: center
-  //justify-content: center
-
-  // IM DONT WANT USE POSITION
-  //I PROMISE U
-
-  position: relative;
-  top: 50%;
-  left: 50%;
+  // shitty code :)
+  position: relative
+  top: 50%
+  left: 50%
   transform: translate(-50%, -50%)
   img
     width: 24px
@@ -60,7 +51,6 @@
 @keyframes rotate
   from
     transform: rotate(0)
-
   to
     transform: rotate(360deg)
 
@@ -80,17 +70,16 @@
       margin-bottom: 5px
       >
         span
-          background: rgba(0, 0, 0, 0.4)
+          background: $slider-span-bg-color
           max-width: 200px
-          color: white
+          color: $secondary-color
           padding: 2px 5px 2px 5px
           text-align: justify
           border-radius: 3px
-
         img
-          filter: invert($invertIcons)
+          filter: invert($invert-icons)
           border-radius: 3px
-          background: rgba(255, 255, 255, 0.4)
+          background: $slider-img-bg-color
           width: 16px
           height: 16px
           margin: 0 10px 0 0

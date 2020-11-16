@@ -11,14 +11,16 @@ const Footer: React.FC = () => {
           <div>
             <img src={SrcInst} alt="" />
             <span>
-              Все данные берутся с моего <a href="https://www.instagram.com/sepezho">instagram</a>, при загрузке страницы.
+              Все данные берутся с моего <a href="https://www.instagram.com/sepezho">instagram</a>,
+              при загрузке страницы.
             </span>
           </div>
           <span>
-            Если ты работадатель, или айтишник, то вот мой <a href="https://sepezho.com">сайт</a> со всеми моими работами.
+            Если ты работадатель, или айтишник, то вот
+            мой <a href="https://portfolio.sepezho.com">сайт</a> со
+            всеми моими работами.
           </span>
         </div>
-
         <span>
           Created by Sepezho 2020
         </span>

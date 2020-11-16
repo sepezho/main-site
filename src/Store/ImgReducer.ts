@@ -6,8 +6,8 @@ export const initialState = {
         profile_pic_url: '',
         full_name: 'loading...',
         username: 'loading',
-      }
-    }
+      },
+    },
   },
 };
 
