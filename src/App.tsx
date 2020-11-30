@@ -9,11 +9,12 @@ import './Style/App.sass';
 import Header from './components/Header/Header';
 import MainPage from './components/MainPage/MainPage';
 import Footer from './components/Footer/Footer';
-import CardRotate from './Logics/CardRotate/CardRotate';
+// import CardRotate from './Logics/CardRotate/CardRotate';
 
 class App extends React.Component {
   componentDidMount() {
-    CardRotate();
+    // let card = new CardRotate();
+    // card.run();
   }
 
   render() {

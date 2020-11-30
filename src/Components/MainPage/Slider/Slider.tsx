@@ -17,11 +17,11 @@ const SliderModule: React.FC = (props) => {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 10000,
+    autoplay: true,
+    autoplaySpeed: 7000,
   };
 
-  const MapImgs = (props) => {
+  const FilledSlider = (props) => {
     if (props.imgs.edge_owner_to_timeline_media) {
       return (
         <Slider {...settings}>
@@ -73,11 +73,12 @@ const SliderModule: React.FC = (props) => {
       <div className={s.Title}>
         {props.imgs.username.toUpperCase()}
       </div>
-      <div className={`${s.SliderContainer} rotateContainer`}>
-        <div className={`${s.SliderContainerItem} rotateItem`}>
-          <MapImgs imgs={props.imgs} />
+      <div className={s.SliderContainer}>
+        <div className={s.SliderContainerItem}>
+          <FilledSlider imgs={props.imgs} />
         </div>
-        <link
+      </div>
+      <link
           rel="stylesheet"
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
@@ -87,7 +88,6 @@ const SliderModule: React.FC = (props) => {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
-      </div>
     </div>
   );
 };

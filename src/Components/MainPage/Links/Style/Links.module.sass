@@ -18,7 +18,8 @@
 
 .activeImg
   transition: 0s
-  animation: rotate3d 5s linear
+  @media screen and (min-width: 950px)
+    animation: rotate3d 5s linear
 
 @keyframes rotate3d
   from
@@ -33,6 +34,7 @@
 @media screen and (max-width: 950px)
   .LinksContainer
     width: 34px
-    margin: 30px 0 0 0
-
-
+    margin: 0 0 -100px 0
+    transform: rotate(90deg)
+    img
+      transform: rotate(-90deg)
