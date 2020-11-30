@@ -17,7 +17,7 @@ const SliderModule: React.FC = (props) => {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 10000,
   };
 

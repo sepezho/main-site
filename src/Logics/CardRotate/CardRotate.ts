@@ -3,7 +3,7 @@ const CardRotate = () => {
     const cardItem = this.querySelector('.rotateItem');
     const halfHeight = cardItem.offsetHeight / 2;
     const halfWidth = cardItem.offsetWidth / 2;
-    cardItem.style.transform = `rotatex(${-(event.offsetY - halfHeight) / 200}deg) rotatey(${(event.offsetX - halfWidth) / 200}deg)`;
+    cardItem.style.transform = 'rotatex(' + -(event.offsetY - halfHeight) / 200 + 'deg) rotateY(' + (event.offsetX - halfWidth) / 200 + 'deg)';
   };
   const stopRotate = function(this: any) {
     const cardItem = this.querySelector('.rotateItem');
