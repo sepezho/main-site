@@ -2,7 +2,7 @@
 // Please do not change this file!
 interface CssExports {
   'Slide': string;
-  'SliderContainerItem': string;
+  'SliderContainer': string;
   'SliderContainerMain': string;
   'SliderNote': string;
   'Title': string;

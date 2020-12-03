@@ -8,22 +8,19 @@
   margin-left: 50px
   flex-direction: row-reverse
   position: relative
+  transform: perspective(500px)
 
-// .SliderContainer
-  // perspective: 1000px
-  // transform-style: preserve-3d
-
-.SliderContainerItem
+.SliderContainer
+  transform-style: preserve-3d
+  position: absolute
   border-radius: 10px
   overflow: hidden
-  transition: .3s
   width: 300px
   height: 300px
-  transform: rotate(0)
   box-shadow: 0px 0px 40px 10px $shadow-slider
+  transition: box-shadow .3s
   &:hover
     box-shadow: 0px 0px 50px 15px $shadow-slider
-
   img
     width: 300px
     height: 300px
@@ -33,7 +30,7 @@
     filter: invert($invert-icons)
     li
       margin: 0
-
+ 
 .Title
   font-family: 'Gilroy BlackItalic'
   font-size: 40pt
@@ -43,12 +40,8 @@
   float: right
 
 .WaitingSlide
-  // shitty code :)
-  position: relative
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
   img
+    margin-top: 126px
     width: 24px
     height: 24px
     animation: rotate 5s linear infinite
@@ -60,6 +53,8 @@
     transform: rotate(360deg)
 
 .Slide
+  width: 300px !important
+  height: 300px !important
   > div
     position: absolute
     top: 0
@@ -73,7 +68,7 @@
       flex-direction: row
       align-items: center
       margin-bottom: 5px
-      >
+      > 
         span
           background: $slider-span-bg-color
           max-width: 200px
@@ -102,6 +97,7 @@
     margin-bottom: 55px
     margin-top: -10px
     margin-left: 0
+    height: 380px
 
   .Title
     font-size: 36pt

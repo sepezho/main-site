@@ -20,4 +20,3 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 export default connect(null, mapDispatchToProps)(UpdateImgsFunc);
-//# sourceMappingURL=UpdateImgs.js.map

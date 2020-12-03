@@ -1,12 +1,14 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { connect } from 'react-redux';
+import Tilt from 'src/Logics/Tilt.tsx';
 
 import Waiting from 'src/Static/Img/Icons/Slider/Waiting.svg';
 import Heart from 'src/Static/Img/Icons/Slider/Heart.svg';
 import Comments from 'src/Static/Img/Icons/Slider/Comments.svg';
 import File from 'src/Static/Img/Icons/Slider/File.svg';
 import Calendar from 'src/Static/Img/Icons/Slider/Calendar.svg';
+import useResponsive from 'src/Logics/responsive'
 
 import s from './Style/Slider.module.sass';
 
@@ -24,7 +26,7 @@ const SliderModule: React.FC = (props) => {
   const FilledSlider = (props) => {
     if (props.imgs.edge_owner_to_timeline_media) {
       return (
-        <Slider {...settings}>
+        <Slider className={s.SliderContainer} {...settings}>
           {props.imgs.edge_owner_to_timeline_media.edges.map((e) => e.node).slice(0, 10).map((img) => (
             <div key={img.id} className={s.Slide}>
               <img src={img.thumbnail_resources[4].src} className={s.Slider_img} alt="" />
@@ -62,22 +64,20 @@ const SliderModule: React.FC = (props) => {
       );
     }
     return (
-      <Slider {...settings} className={s.WaitingSlide}>
+      <Slider {...settings} className={`${s.WaitingSlide} ${s.SliderContainer}`}>
         <img src={Waiting} alt="" />
       </Slider>
     );
   };
-
   return (
     <div className={s.SliderContainerMain}>
       <div className={s.Title}>
         {props.imgs.username.toUpperCase()}
+        
       </div>
-      <div className={s.SliderContainer}>
-        <div className={s.SliderContainerItem}>
-          <FilledSlider imgs={props.imgs} />
-        </div>
-      </div>
+
+      {useResponsive('(min-width: 950px)', true) ? <Tilt children={<FilledSlider className={s.SliderContainerItem} imgs={props.imgs} />} /> : <FilledSlider className={s.SliderContainerItem} imgs={props.imgs} />}
+      
       <link
           rel="stylesheet"
           type="text/css"
