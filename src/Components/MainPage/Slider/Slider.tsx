@@ -13,6 +13,7 @@ import useResponsive from 'src/Logics/responsive'
 import s from './Style/Slider.module.sass';
 
 const SliderModule: React.FC = (props) => {
+  console.log(props)
   const settings = {
     dots: true,
     arrows: false,
@@ -73,7 +74,6 @@ const SliderModule: React.FC = (props) => {
     <div className={s.SliderContainerMain}>
       <div className={s.Title}>
         {props.imgs.username.toUpperCase()}
-        
       </div>
 
       {useResponsive('(min-width: 950px)', true) ? <Tilt children={<FilledSlider className={s.SliderContainerItem} imgs={props.imgs} />} /> : <FilledSlider className={s.SliderContainerItem} imgs={props.imgs} />}

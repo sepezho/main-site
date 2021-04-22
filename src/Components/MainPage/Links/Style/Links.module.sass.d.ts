@@ -4,6 +4,7 @@ interface CssExports {
   'LinksContainer': string;
   'activeImg': string;
   'rotate3d': string;
+  'rotate3dsec': string;
 }
 export const cssExports: CssExports;
 export default cssExports;

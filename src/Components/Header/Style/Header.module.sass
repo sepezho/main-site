@@ -43,16 +43,20 @@ a
   height: 64px
   border-radius: 5px
   box-shadow: 0px 0px 10px 5px $shadow
+  margin: 5px 0 0 0
 
 .title
   color: $primary-color
   font-family: 'Gilroy BlackItalic'
   font-size: xx-large
+  margin: 0 15px 0 0
+  text-align: right
 
 .subTitle
   color: $header-status-color
   font-family: 'Gilroy ThinItalic'
-  margin: -5px 0 0 70px
+  margin: -5px 15px 0 0
+  text-align: right
 
 
 @media screen and (max-width: 450px)
@@ -60,3 +64,9 @@ a
     width: 100vw
   .container
     border-radius: 0
+    justify-content: center
+    flex-direction: column
+  .title
+    text-align: center
+  .subTitle
+    text-align: center

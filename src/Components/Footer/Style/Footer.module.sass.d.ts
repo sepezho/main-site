@@ -3,6 +3,7 @@
 interface CssExports {
   'container': string;
   'root': string;
+  'rotate3d': string;
 }
 export const cssExports: CssExports;
 export default cssExports;
