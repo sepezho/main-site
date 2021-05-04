@@ -1,0 +1,109 @@
+@import 'src/Style/MainVar.sass'
+
+.SliderContainerMain
+  width: 300px
+  height: 300px
+  float: right
+  display: flex
+  margin-left: 50px
+  flex-direction: row-reverse
+  position: relative
+  transform: perspective(500px)
+
+.SliderContainer
+  transform-style: preserve-3d
+  position: absolute
+  border-radius: 10px
+  overflow: hidden
+  width: 300px
+  height: 300px
+  box-shadow: 0px 0px 50px 7px $shadow-slider
+  transition: box-shadow .3s
+  &:hover
+    box-shadow: 0px 0px 50px 12px $shadow-slider
+  canvas
+    width: 300px !important
+    height: 300px !important
+  ul
+    width: 100%
+    bottom: 5px
+    filter: invert($invert-icons)
+    li
+      margin: 0
+ 
+.Title
+  font-family: 'Gilroy BlackItalic'
+  font-size: 40pt
+  transform: rotate(90deg)
+  margin-left: -180px
+  color: $slider-title-color
+  float: right
+
+.WaitingSlide
+  img
+    margin-top: 126px
+    width: 24px
+    height: 24px
+    animation: rotate 5s linear infinite
+
+@keyframes rotate
+  from
+    transform: rotate(0)
+  to
+    transform: rotate(360deg)
+
+.Slide
+  width: 300px !important
+  height: 300px !important
+  > div
+    position: absolute
+    top: 0
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    padding: 10px 0 0 10px
+    > div
+      display: flex
+      flex-direction: row
+      align-items: center
+      margin-bottom: 5px
+      > 
+        span
+          background: $slider-span-bg-color
+          max-width: 235px
+          width: auto
+          color: $secondary-color
+          padding: 2px 5px 2px 5px
+          text-align: justify
+          border-radius: 3px
+        img
+          filter: invert($invert-icons)
+          border-radius: 3px
+          background: $slider-img-bg-color
+          width: 16px
+          height: 16px
+          margin: 0 10px 0 0
+          padding: 3px
+
+.SliderNote
+  position: absolute
+  bottom: 38px
+  > div
+    margin-bottom: 0
+    text-align: left
+
+@media screen and (max-width: 950px)
+  .SliderContainerMain
+    flex-direction: column
+    margin-bottom: 55px
+    margin-top: -10px
+    margin-left: 0
+    height: 380px
+
+  .Title
+    font-size: 36pt
+    transform: rotate(0deg)
+    margin: auto
+    float: none
+    margin-bottom: 20px

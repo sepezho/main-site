@@ -1,0 +1,33 @@
+{
+  "name": "inst_api",
+  "version": "1.1.2",
+  "dependencies": {
+    "express": "^4.17.1",
+    "https": "^1.0.0",
+    "instagram-web-api": "^2.2.2",
+    "tough-cookie-filestore2": "^1.0.0"
+  },
+  "scripts": {
+    "server": "node ServerAPI.js"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "ie 11",
+      "last 2 chrome version",
+      "last 2 firefox version",
+      "last 2 safari version"
+    ]
+  },
+  "homepage": "https://sepezho.com",
+  "description": "Inst API",
+  "author": "SEPEZHO",
+  "license": "ISC",
+  "devDependencies": {
+    "ws": "3.3.2"
+  }
+}
