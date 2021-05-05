@@ -61,7 +61,6 @@ const SliderModule: React.FC = (props) => {
   }
   
   const FilledSlider = (props) => {
-    console.log(props)
     if (props.instData.edge_owner_to_timeline_media) {
       return (
         <Slider className={s.SliderContainer} {...settings}>

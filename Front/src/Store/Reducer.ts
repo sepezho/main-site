@@ -13,8 +13,8 @@ export function reducer(state = initialState, action) {
     case 'UPDATE_INST_DATA':
       return { ...state, instData: action.payload };
 
-    // case 'UPDATE_VIEWS':
-    //   return { ...state, views: action.payload };
+    case 'UPDATE_VIEWS':
+      return { ...state, views: action.payload };
   
     default:
       return state;

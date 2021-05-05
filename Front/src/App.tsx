@@ -9,14 +9,21 @@ import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
 
+import GetInstData from 'src/Logics/GetInstData/GetInstData';
+import GetInstDataFunc from 'src/Logics/GetViews/GetViews';
+
+
 const App = () => {
   return (
     <Provider store={store}>
       <Header />
       <Main />
       <Footer />
+
+      <GetInstData />
+      <GetInstDataFunc />
     </Provider>
   );
 }
-// https://api-metrika.yandex.net/analytics/v3/data/ga?end-date=today&ids=ga%3A74727217&metrics=ga%3Apageviews&start-date=2021-03-25
+
 export default App;

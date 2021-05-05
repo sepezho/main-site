@@ -8,12 +8,11 @@ const GetInstDataFunc: React.FC = (props) => {
   })
   .then((response) => response.json())
   .then((response) => {
-    console.log(response)
     props.UpdateInstData(response)
   })
   .catch((err) => {
     console.log(err);
-    // alert("Проблема с сервером :)");
+    alert("Не могу получить данные с Instagram :)");
   });
   return null;
 };

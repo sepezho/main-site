@@ -4,20 +4,22 @@ a
   text-decoration: none
 
 .root
-  width: 350px
-  margin: auto
-  margin-top: 50px
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
 
 .container
   padding: 5px 35px 5px 35px
+  margin: 48px 0 24px 0
   border-radius: 100px
-  transition: .3s
-  width: calc(100% - 70px)
   display: flex
   flex-direction: row-reverse
   justify-content: space-around
   align-items: center
-  box-shadow: 0px 0px 50px 7px  $shadow
+  transition: .3s
+  box-shadow: 0px 0px 50px 2px $shadow
   &:hover
     box-shadow: 0px 0px 50px 12px $shadow
   div
@@ -26,6 +28,7 @@ a
     display: flex
     flex-direction: column
     justify-content: center
+    margin: 12px 24px 12px 0
 
 .waiting
   width: 16px
@@ -50,23 +53,38 @@ a
   color: $primary-color
   font-family: 'Gilroy BlackItalic'
   font-size: xx-large
-  margin: 0 15px 0 0
   text-align: right
 
 .subTitle
   color: $header-status-color
   font-family: 'Gilroy ThinItalic'
-  margin: -5px 15px 0 0
+  margin: -5px 0 0 0
   text-align: right
 
+.viewsContainer
+  padding: 4px 16px
+  border-radius: 100px
+  box-shadow: 0px 0px 50px 2px  $shadow
+  transition: .3s
+  &:hover
+    box-shadow: 0px 0px 50px 12px $shadow
+  img
+    width: 16px
+    height: 16px
+    margin: 2.25px 12px -2.25px 0
 
 @media screen and (max-width: 450px)
   .root
-    width: 100vw
+    width: 100%
   .container
+    width: 100%
+    margin: 0 0 24px 0
+    padding: 16px 0 0 0
     border-radius: 0
     justify-content: center
     flex-direction: column
+    p
+      margin: 12px 0
   .title
     text-align: center
   .subTitle

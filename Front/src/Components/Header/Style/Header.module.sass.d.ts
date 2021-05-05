@@ -7,6 +7,7 @@ interface CssExports {
   'rotate': string;
   'subTitle': string;
   'title': string;
+  'viewsContainer': string;
   'waiting': string;
 }
 export const cssExports: CssExports;

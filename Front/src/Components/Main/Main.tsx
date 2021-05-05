@@ -1,6 +1,5 @@
 import React from 'react';
 
-import GetInstData from 'src/Logics/GetInstData/GetInstData';
 import Links from './Links/Links';
 import Text from './Text/Text';
 import Slider from './Slider/Slider';
@@ -17,7 +16,7 @@ const Main: React.FC = () => {
           <Slider />
         </div>
       </div>
-      <GetInstData />
+
     </div>
   );
 };
