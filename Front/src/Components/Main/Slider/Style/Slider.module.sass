@@ -19,11 +19,9 @@
   height: 300px
   box-shadow: 0px 0px 50px 7px $shadow-slider
   transition: box-shadow .3s
+
   &:hover
     box-shadow: 0px 0px 50px 12px $shadow-slider
-  canvas
-    width: 300px !important
-    height: 300px !important
   ul
     width: 100%
     bottom: 5px
@@ -55,6 +53,10 @@
 .Slide
   width: 300px !important
   height: 300px !important
+  > img
+    width: 301px
+    height: 301px
+    margin-top: -1px 
   > div
     position: absolute
     top: 0
