@@ -21,7 +21,7 @@ const SliderModule: React.FC = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 7000,
+    autoplaySpeed: 70000000,
   };  
   
   const renderSlide = instPost => {
@@ -33,7 +33,7 @@ const SliderModule: React.FC = (props) => {
               <img src={Calendar} alt="" />
               <span>
                 {/*SOME GENIUS CODE HERE :D*/}
-                {(instPost.accessibility_caption?.split('.')[0].split(/([A-Z])/).reverse()[1] + instPost.accessibility_caption?.split('.')[0].split(/[A-Z]/).reverse()[0]) ? instPost.accessibility_caption?.split('.')[0].split(/([A-Z])/).reverse()[1] + instPost.accessibility_caption?.split('.')[0].split(/[A-Z]/).reverse()[0] : 'Unfound date'}
+                {instPost.accessibility_caption.split('.')[0].split('tagging')[0].split('on')[1] ? instPost.accessibility_caption.split('.')[0].split('tagging')[0].split('on')[1] : 'Unfound date'}
               </span>
             </div>
             <div>

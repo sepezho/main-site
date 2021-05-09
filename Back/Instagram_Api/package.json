@@ -3,6 +3,7 @@
   "version": "1.1.2",
   "dependencies": {
     "express": "^4.17.1",
+    "fs": "*",
     "https": "^1.0.0",
     "instagram-web-api": "^2.2.2",
     "tough-cookie-filestore2": "^1.0.0"
