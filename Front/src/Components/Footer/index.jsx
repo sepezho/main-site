@@ -1,9 +1,9 @@
 import React from 'react';
 
-import SrcInst from 'src/Static/Img/Icons/Sidebar/Inst.png';
+import SrcInst from '../../Static/Img/Icons/Sidebar/Inst.png';
 import s from './Style/Footer.module.sass';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <div className={s.root}>
       <div className={s.container}>

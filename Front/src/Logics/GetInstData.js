@@ -1,8 +1,7 @@
-import React from 'react';
 import { connect } from 'react-redux';
-import { UpdateInstData } from 'src/Store/Actions/UpdateInstDataAction';
+import { UpdateInstData } from '../Store/Actions/UpdateInstDataAction';
 
-const GetInstDataFunc: React.FC = (props) => {
+const GetInstDataFunc = (props) => {
   fetch('https://sepezho.com:8888/API/GetInstData', {
     method: 'GET'
   })

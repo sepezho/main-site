@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 
-import SrcGithub from 'src/Static/Img/Icons/Sidebar/GitHub.png';
-import SrcStackOverflow from 'src/Static/Img/Icons/Sidebar/StackOverflow.png';
-import Codewars from 'src/Static/Img/Icons/Sidebar/Codewars.png';
-import SrcTelegram from 'src/Static/Img/Icons/Sidebar/Telegram.png';
-import SrcVk from 'src/Static/Img/Icons/Sidebar/Vk.png';
-import SrcInst from 'src/Static/Img/Icons/Sidebar/Inst.png';
-import SrcYouTube from 'src/Static/Img/Icons/Sidebar/YouTube.png';
+import SrcGithub from '../../../Static/Img/Icons/Sidebar/GitHub.png';
+import SrcStackOverflow from '../../../Static/Img/Icons/Sidebar/StackOverflow.png';
+import Codewars from '../../../Static/Img/Icons/Sidebar/Codewars.png';
+import SrcTelegram from '../../../Static/Img/Icons/Sidebar/Telegram.png';
+import SrcVk from '../../../Static/Img/Icons/Sidebar/Vk.png';
+import SrcInst from '../../../Static/Img/Icons/Sidebar/Inst.png';
+import SrcYouTube from '../../../Static/Img/Icons/Sidebar/YouTube.png';
 
 import s from './Style/Links.module.sass';
 
@@ -39,7 +39,7 @@ const Links = () => {
     return () => {
       clearInterval(interval);
     };
-  }, [items]);
+  }, []);
 
   return (
     <div className={s.LinksContainer}>

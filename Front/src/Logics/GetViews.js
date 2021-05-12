@@ -1,8 +1,7 @@
-import React from 'react';
 import { connect } from 'react-redux';
-import { UpdateViews } from 'src/Store/Actions/UpdateViewsAction';
+import { UpdateViews } from '../Store/Actions/UpdateViewsAction';
 
-const UpdateViewsFunc: React.FC = (props) => {
+const UpdateViewsFunc = (props) => {
   const fetchUrl = () => {
     fetch('https://api-metrika.yandex.net/analytics/v3/data/ga?end-date=today&ids=ga%3A74727217&metrics=ga%3Apageviews&start-date=2021-03-25', {
       method: 'GET',

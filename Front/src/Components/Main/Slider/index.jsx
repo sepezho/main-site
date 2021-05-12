@@ -1,19 +1,19 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { connect } from 'react-redux';
-import Tilt from 'src/Logics/Tilt';
-import RenderImg from 'src/Components/RenderImg';
+import Tilt from '../../../Logics/Tilt';
+import RenderImg from '../../../Logics/RenderImg';
 
-import Waiting from 'src/Static/Img/Icons/Slider/Waiting.svg';
-import Heart from 'src/Static/Img/Icons/Slider/Heart.svg';
-import Comments from 'src/Static/Img/Icons/Slider/Comments.svg';
-import File from 'src/Static/Img/Icons/Slider/File.svg';
-import Calendar from 'src/Static/Img/Icons/Slider/Calendar.svg';
-import useResponsive from 'src/Logics/responsive';
+import Waiting from '../../../Static/Img/Icons/Slider/Waiting.svg';
+import Heart from '../../../Static/Img/Icons/Slider/Heart.svg';
+import Comments from '../../../Static/Img/Icons/Slider/Comments.svg';
+import File from '../../../Static/Img/Icons/Slider/File.svg';
+import Calendar from '../../../Static/Img/Icons/Slider/Calendar.svg';
+import useResponsive from '../../../Logics/Responsive';
 
 import s from './Style/Slider.module.sass';
 
-const SliderModule: React.FC = (props) => {
+const SliderModule = (props) => {
   const settings = {
     dots: true,
     arrows: false,

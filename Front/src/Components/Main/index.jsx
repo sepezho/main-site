@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Links from './Links/Links';
-import Text from './Text/Text';
-import Slider from './Slider/Slider';
+import Links from './Links/';
+import Text from './Text/';
+import Slider from './Slider/';
 
 import s from './Style/MainPage.module.sass';
 
-const Main: React.FC = () => {
+const Main = () => {
   return (
     <div className={s.container}>
       <div className={s.mainPage}>

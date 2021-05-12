@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
-export default (query: string, serverSideValue = false): boolean => {
+// eslint-disable-next-line
+export default (query, serverSideValue = false) => {
   if (typeof window === 'undefined') {
     return serverSideValue;
   }
@@ -21,7 +22,7 @@ export default (query: string, serverSideValue = false): boolean => {
       media.removeListener(handler);
     };
 
-  }, []);
+  }, [media]);
 
   return matches;
 };

@@ -1,13 +1,13 @@
 import React from 'react';
 
 import {connect} from 'react-redux';
-import RenderImg from 'src/Components/RenderImg';
-import Waiting from 'src/Static/Img/Icons/Slider/Waiting.svg';
-import EyeIco from 'src/Static/Img/Icons/eyeIco.svg';
+import RenderImg from '../../Logics/RenderImg';
+import Waiting from '../../Static/Img/Icons/Slider/Waiting.svg';
+import EyeIco from '../../Static/Img/Icons/eyeIco.svg';
 
 import s from './Style/Header.module.sass';
 
-const Header: React.FC = (props) => {
+const Header = (props) => {
   return (
     <div className={s.root}>
       <div className={s.container}>
