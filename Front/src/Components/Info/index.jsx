@@ -4,13 +4,13 @@ import Links from './Links/';
 import Text from './Text/';
 import Slider from './Slider/';
 
-import s from './Style/MainPage.module.sass';
+import s from './Style/Info.module.sass';
 
-const Main = () => {
+const Info = () => {
   return (
     <div className={s.container}>
-      <div className={s.mainPage}>
-        <div className={s.CenterMain}>
+      <div className={s.Info}>
+        <div className={s.CenterInfo}>
           <Links />
           <Text />
           <Slider />
@@ -21,4 +21,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Info;

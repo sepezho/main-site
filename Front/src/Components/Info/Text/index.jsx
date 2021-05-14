@@ -1,5 +1,6 @@
 import React from 'react';
 
+import useResponsive from '../../../Logics/Responsive';
 import s from './Style/Text.module.sass';
 
 function Text() {
@@ -25,7 +26,9 @@ function Text() {
       Придерживаюсь принципов <span className={s.coursive}>минимализма</span> во всем.
       Ах да, чуть не забыл. Мне 17 лет, я школьник 11-го класса.
       Сейчас активно веду <a href={'https://t.me/sepezho_log'}>телеграм</a> канал
-      и <a href={'https://www.instagram.com/sepezho'}>инсту</a>. Но и остальные ссылки <span className={s.secondaryText}>(сбоку)</span> можешь посмотреть.
+      и <a href={'https://www.instagram.com/sepezho'}>инсту</a>. Но и остальные ссылки <span className={s.secondaryText}>({
+        useResponsive('(min-width: 950px)', true) ? 'сбоку' : 'снизу'
+      })</span> можешь посмотреть.
       <p>Удачи тебе :)</p>
     </div>
   );

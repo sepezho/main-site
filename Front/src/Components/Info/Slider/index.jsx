@@ -21,7 +21,7 @@ const SliderModule = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 70000000,
+    autoplaySpeed: 7000,
   };  
   
   const renderSlide = instPost => {
