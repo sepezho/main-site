@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1e27c687.chunk.css",
+    "main.js": "/static/js/main.cb614425.chunk.js",
+    "main.js.map": "/static/js/main.cb614425.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.730d58f5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.730d58f5.js.map",
+    "static/js/2.8cf761cf.chunk.js": "/static/js/2.8cf761cf.chunk.js",
+    "static/js/2.8cf761cf.chunk.js.map": "/static/js/2.8cf761cf.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.1e27c687.chunk.css.map": "/static/css/main.1e27c687.chunk.css.map",
+    "static/js/2.8cf761cf.chunk.js.LICENSE.txt": "/static/js/2.8cf761cf.chunk.js.LICENSE.txt",
+    "static/media/Calendar.360e1e69.svg": "/static/media/Calendar.360e1e69.svg",
+    "static/media/Codewars.9ad2e736.png": "/static/media/Codewars.9ad2e736.png",
+    "static/media/Comments.048a1b07.svg": "/static/media/Comments.048a1b07.svg",
+    "static/media/File.8600c1eb.svg": "/static/media/File.8600c1eb.svg",
+    "static/media/App.sass": "/static/media/Roboto-ThinItalic.082b9e84.ttf",
+    "static/media/GitHub.6570284f.png": "/static/media/GitHub.6570284f.png",
+    "static/media/Heart.105f24fc.svg": "/static/media/Heart.105f24fc.svg",
+    "static/media/Inst.6df1f476.png": "/static/media/Inst.6df1f476.png",
+    "static/media/Waiting.6d29e655.svg": "/static/media/Waiting.6d29e655.svg",
+    "static/media/eyeIco.58f85536.svg": "/static/media/eyeIco.58f85536.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.730d58f5.js",
+    "static/js/2.8cf761cf.chunk.js",
+    "static/css/main.1e27c687.chunk.css",
+    "static/js/main.cb614425.chunk.js"
+  ]
+}

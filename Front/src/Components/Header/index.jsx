@@ -8,6 +8,20 @@ import EyeIco from '../../Static/Img/Icons/eyeIco.svg';
 import s from './Style/Header.module.sass';
 
 const Header = (props) => {
+  fetch('https://sepezho.com:7777/API/GitHubCommits', {
+    method: "POST",
+  })
+  .then(response => {
+    console.log(response)
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
   return (
     <div className={s.root}>
       <div className={s.container}>

@@ -1,0 +1,29 @@
+@import 'src/Style/MainVar.sass'
+
+.container
+  display: flex
+  justify-content: center
+  margin: 48px 0
+
+.bubblesContainer
+  position: relative
+  display: flex
+  justify-content: center
+  height: 1255px
+  width: 900px
+  > *
+    position: absolute
+
+.title
+  font-family: 'Gilroy BlackItalic'
+  font-size: 40pt
+  transform: rotate(90deg)
+  position: absolute
+  right: 137px
+  margin-top: calc(50% - 129.5px)
+  color: $slider-title-color
+  float: right
+
+// @media screen and (max-width: 950px)
+//   .bubblesContainer
+//     width: 90%
