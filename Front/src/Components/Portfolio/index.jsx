@@ -6,7 +6,9 @@ import s from './Style/Portfolio.module.sass';
 const Portfolio = () => {
   return (
     <div className={s.container}>
-      <Bubbles />
+      <div className={s.centerContainer}>
+        <Bubbles />
+      </div>
     </div>
   );
 };

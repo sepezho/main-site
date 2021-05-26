@@ -1,26 +1,22 @@
 @import 'src/Style/MainVar.sass'
 
 .SliderContainerMain
-  width: 300px
-  height: 300px
   float: right
   display: flex
-  margin-left: 50px
   flex-direction: row-reverse
   position: relative
   transform: perspective(500px)
 
 .SliderContainer
+  margin-right: 24px
   transform-style: preserve-3d
   position: absolute
   border-radius: 10px
   overflow: hidden
   width: 300px
   height: 300px
-  box-shadow: 0px 0px 50px 4px $shadow-slider
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.0034), 0 6.7px 5.3px rgba(0, 0, 0, 0.0048), 0 12.5px 10px rgba(0, 0, 0, 0.006), 0 22.3px 17.9px rgba(0, 0, 0, 0.0072), 0 41.8px 33.4px rgba(0, 0, 0, 0.0086), 0 100px 80px rgba(0, 0, 0, 0.012)
   transition: box-shadow .3s
-  &:hover
-    box-shadow: 0px 0px 50px 0px $shadow-slider
   ul
     width: 100%
     bottom: 5px
@@ -29,12 +25,12 @@
       margin: 0
  
 .Title
+  text-align: center
+  position: relative
   font-family: 'Gilroy BlackItalic'
   font-size: 40pt
-  transform: rotate(90deg)
-  margin-left: -180px
   color: $slider-title-color
-  float: right
+  writing-mode: vertical-rl
 
 .WaitingSlide
   img
@@ -94,12 +90,15 @@
     margin-bottom: 0
     text-align: left
 
-@media screen and (max-width: 950px)
+@media screen and (max-width: 1024px)
   .SliderContainerMain
     flex-direction: column
     margin-top: -12px
     margin-left: 0
     height: 380px
+
+  .SliderContainer
+    margin-right: 0
 
   .Title
     font-size: 36pt
@@ -107,3 +106,4 @@
     margin: auto
     float: none
     margin-bottom: 20px
+    writing-mode: horizontal-tb

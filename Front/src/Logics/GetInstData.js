@@ -11,7 +11,7 @@ const GetInstDataFunc = (props) => {
   })
   .catch((err) => {
     console.log(err);
-    alert("Не могу получить данные с Instagram :)");
+    // alert("Не могу получить данные с Instagram :)");
   });
   return null;
 };

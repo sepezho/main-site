@@ -32,8 +32,7 @@ const SliderModule = (props) => {
             <div>
               <img src={Calendar} alt="" />
               <span>
-                {/*SOME GENIUS CODE HERE :D*/}
-                {instPost.accessibility_caption.split('.')[0].split('tagging')[0].split('on')[1] ? instPost.accessibility_caption.split('.')[0].split('tagging')[0].split('on')[1] : 'Unfound date'}
+                {instPost.accessibility_caption.split('.')[0].split('tagging')[0].split('on')[1]}
               </span>
             </div>
             <div>
@@ -51,8 +50,15 @@ const SliderModule = (props) => {
             <div className={s.SliderNote}>
               <img src={File} alt="" />
               <span>
-                {/*AND HERE*/}
-                {instPost.edge_media_to_caption.edges[0]?.node.text ? instPost.edge_media_to_caption.edges[0]?.node.text.length >= 70 ? `${instPost.edge_media_to_caption.edges[0]?.node.text.split(`\n`)[0].slice(0, 70)}...` : instPost.edge_media_to_caption.edges[0]?.node.text.split(`\n`)[0] : 'Unfound note'}
+                {
+                  instPost.edge_media_to_caption.edges[0]?.node.text ?
+                    instPost.edge_media_to_caption.edges[0]?.node.text.length >= 70 ?
+                      instPost.edge_media_to_caption.edges[0]?.node.text.split(`\n`)[0].slice(0, 70) + '...'
+                    :
+                      instPost.edge_media_to_caption.edges[0]?.node.text.split(`\n`)[0]
+                  :
+                    'Unfound note'
+                }
               </span>
             </div>
           </div>
@@ -61,7 +67,8 @@ const SliderModule = (props) => {
   }
   
   const FilledSlider = (props) => {
-    if (props.instData.edge_owner_to_timeline_media) {
+    console.log(props)
+    if (props.instData.edge_owner_to_timeline_media?.edges[0]) {
       return (
         <Slider className={s.SliderContainer} {...settings}>
           {props.instData.edge_owner_to_timeline_media.edges.filter(e => !e.node.is_video).map((e) => e.node).slice(0, 10).map(e => renderSlide(e))}
@@ -74,20 +81,19 @@ const SliderModule = (props) => {
       </Slider>
     );
   };
+  // {props.instData.username.toUpperCase()}
 
   return (
     <div className={s.SliderContainerMain}>
-      <div className={s.Title}>
-        {props.instData.username.toUpperCase()}
-      </div>
-
+      <span className={s.Title}>
+        ABOUTME 
+      </span>
       {
-        useResponsive('(min-width: 950px)', true) ?
+        useResponsive('(min-width: 1024px)', true) ?
           <Tilt children={<FilledSlider className={s.SliderContainerItem} instData={props.instData} />} />
         :
           <FilledSlider className={s.SliderContainerItem} instData={props.instData} />
       }
-      
       <link
           rel="stylesheet"
           type="text/css"

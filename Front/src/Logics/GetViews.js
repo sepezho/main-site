@@ -15,7 +15,7 @@ const UpdateViewsFunc = (props) => {
       })
       .catch((err) => {
         console.log(err);
-        alert("Не могу получить данные о просмотрах сайта с Yandex :)");
+        // alert("Не могу получить данные о просмотрах сайта с Yandex :)");
       });
   }
   fetchUrl()

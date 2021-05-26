@@ -4,26 +4,45 @@
   display: flex
   justify-content: center
   margin: 48px 0
+  height: 1250px
+  transition: 1s
+  transition-timing-function: ease-in-out
+  &:hover
+    height: 1322px
+    .title
+      height: 1322px
 
 .bubblesContainer
   position: relative
   display: flex
   justify-content: center
-  height: 1255px
-  width: 900px
+  width: 1024px
   > *
     position: absolute
 
 .title
+  transition: 1s
+  transition-timing-function: ease-in-out
+  height: 1250px
+  text-align: center
+  position: relative
   font-family: 'Gilroy BlackItalic'
   font-size: 40pt
-  transform: rotate(90deg)
-  position: absolute
-  right: 137px
-  margin-top: calc(50% - 129.5px)
   color: $slider-title-color
-  float: right
+  writing-mode: vertical-rl
 
-// @media screen and (max-width: 950px)
-//   .bubblesContainer
-//     width: 90%
+.legend
+  position: absolute
+  bottom: 100px
+  right: 30px
+  .workedOn, .myWorks
+    font-family: 'Gilroy BlackItalic'
+    font-size: 16pt
+  .workedOn
+    color: #BAE5D6
+    margin-bottom: 30px 
+  .myWorks
+    color: #F8C9D5
+
+.bubblesLegend
+  position: absolute
