@@ -6,6 +6,7 @@ export const initialState = {
     username: 'loading',
   },
   views: 'loading...',
+  gitData: [],
 };
 
 export function reducer(state = initialState, action) {
@@ -13,6 +14,9 @@ export function reducer(state = initialState, action) {
     case 'UPDATE_INST_DATA':
       return { ...state, instData: action.payload };
 
+    case 'UPDATE_GIT_DATA':
+      return { ...state, gitData: action.payload };
+  
     case 'UPDATE_VIEWS':
       return { ...state, views: action.payload };
   

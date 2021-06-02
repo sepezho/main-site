@@ -5,12 +5,7 @@
   justify-content: center
   margin: 48px 0
   height: 1250px
-  transition: 1s
   transition-timing-function: ease-in-out
-  &:hover
-    height: 1322px
-    .title
-      height: 1322px
 
 .bubblesContainer
   position: relative
@@ -21,8 +16,6 @@
     position: absolute
 
 .title
-  transition: 1s
-  transition-timing-function: ease-in-out
   height: 1250px
   text-align: center
   position: relative
@@ -31,18 +24,50 @@
   color: $slider-title-color
   writing-mode: vertical-rl
 
-.legend
+.workedOn, .myWorks
+  font-family: 'Gilroy BlackItalic'
   position: absolute
-  bottom: 100px
+  font-size: 16pt
   right: 30px
-  .workedOn, .myWorks
-    font-family: 'Gilroy BlackItalic'
-    font-size: 16pt
-  .workedOn
-    color: #BAE5D6
-    margin-bottom: 30px 
-  .myWorks
-    color: #F8C9D5
+
+.workedOn
+  color: #BAE5D6
+  margin-bottom: 30px 
+  top: 100px
+  transform: rotate(45deg)
+
+.myWorks
+  color: #F8C9D5
+  bottom: 100px
+  transform: rotate(-45deg)
 
 .bubblesLegend
-  position: absolute
+  position: absolute  
+
+@media screen and (max-width: 1024px)
+  .title
+    height: auto
+    font-size: 36pt
+    writing-mode: horizontal-tb
+    margin: -100px 0 0 0
+
+  .bubblesContainer
+    margin: 50px 0 0 0
+
+  .container
+    height: 2250px
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+
+  .workedOn
+    top: 60px
+    margin: 0 120px 0 0
+    right: 50%
+    transform: rotate(-45deg) translate(50%)
+
+  .myWorks
+    top: 2100px
+    margin: 0 100px 0 0
+    right: 50%
+    transform: rotate(45deg) translate(50%)

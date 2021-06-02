@@ -67,7 +67,6 @@ const SliderModule = (props) => {
   }
   
   const FilledSlider = (props) => {
-    console.log(props)
     if (props.instData.edge_owner_to_timeline_media?.edges[0]) {
       return (
         <Slider className={s.SliderContainer} {...settings}>
@@ -81,12 +80,10 @@ const SliderModule = (props) => {
       </Slider>
     );
   };
-  // {props.instData.username.toUpperCase()}
-
   return (
     <div className={s.SliderContainerMain}>
       <span className={s.Title}>
-        ABOUTME 
+        ABOUT ME 
       </span>
       {
         useResponsive('(min-width: 1024px)', true) ?
@@ -94,16 +91,6 @@ const SliderModule = (props) => {
         :
           <FilledSlider className={s.SliderContainerItem} instData={props.instData} />
       }
-      <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
     </div>
   );
 };

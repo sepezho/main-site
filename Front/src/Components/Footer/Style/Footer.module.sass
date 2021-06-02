@@ -12,6 +12,10 @@
     text-decoration: underline
     color: $primary-color
     font-family: 'Roboto MediumItalic'
+    &:hover
+      text-decoration: underline
+      color: #8D41D6
+      
   span, div > div
     max-width: 300px
     text-align: justify
@@ -38,6 +42,12 @@
   to
     transform: rotate3d(0, 1, 0, 360deg)
 
+.lastSignature
+  margin: -15px 0 0 0
+  text-align: right
+  font-size: 14px
+  font-family: 'Roboto ThinItalic'
+
 @media screen and (max-width: 1024px)
   .container
     width: 90%
@@ -51,3 +61,5 @@
       align-items: center
       div
         margin: 0
+  .lastSignature
+    text-align: center

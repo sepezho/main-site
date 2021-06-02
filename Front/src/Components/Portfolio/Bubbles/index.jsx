@@ -1,41 +1,61 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Bubble from './Bubble';
 import useResponsive from '../../../Logics/Responsive';
-import {bubbles, compressedBubbles, bubblesLegend} from './bubblesData';
+import {
+  bubbles,
+  compressedBubbles,
+  mobileBubbles,
+  smallBubbles,
+  compressedSmallBubbles,
+  smallMobileBubbles,
+  bubblesLegend,
+  mobileBubblesLegend
+} from './bubblesData';
 
 import s from './Style/Bubbles.module.sass';
 
 const Bubbles = () => {
-  const [bubblesData, updateBubblesData] = useState(compressedBubbles)
   const isMobile = useResponsive('(min-width: 1024px)', true)
+  const [bubblesData, updateBubblesData] = useState([...compressedBubbles, ...compressedSmallBubbles])
+  
+  useEffect(()=>updateBubblesData(
+    !isMobile ?
+      [...mobileBubbles, ...smallMobileBubbles]
+    :
+      [...compressedBubbles, ...compressedSmallBubbles]
+  ), [isMobile])
 
   return (
     <div
       className={s.container}
-      onMouseEnter={()=> isMobile && updateBubblesData(bubbles)}
-      onMouseLeave={()=> isMobile && updateBubblesData(compressedBubbles)}
+      onMouseEnter={()=> isMobile && updateBubblesData([...bubbles, ...smallBubbles])}
+      onMouseLeave={()=> isMobile && updateBubblesData([...compressedBubbles, ...compressedSmallBubbles])}
     >
       <div className={s.bubblesContainer}>
         {bubblesData.map(e=>
           <Bubble {...e} />
         )}
 
-        <div className={s.legend}>
+        <div className={s.workedOn}>
           <div className={s.bubblesLegend}>
-            {bubblesLegend.map(e=>
+            {(isMobile ? bubblesLegend : mobileBubblesLegend).slice(0, 2).map(e=>
               <Bubble {...e} />
             )}
           </div>
-          <div className={s.workedOn}>
-            <span>
-              Коммерция
-            </span>
+          <span>
+            Коммерция
+          </span>
+        </div>
+
+        <div className={s.myWorks}>
+          <div className={s.bubblesLegend}>
+            {(isMobile ? bubblesLegend : mobileBubblesLegend).slice(2).map(e=>
+              <Bubble {...e} />
+            )}
           </div>
-          <div className={s.myWorks}>
-            <span>
-              Pet-проекты
-            </span>
-          </div>
+          <span>
+            Pet-проекты
+          </span>
         </div>
       </div>
 

@@ -16,13 +16,13 @@ const Footer = () => {
             </span>
           </div>
           <span>
-            Если ты работадатель, или айтишник, то вот
-            мой <a href="https://portfolio.sepezho.com">сайт</a> со
-            всеми моими работами.
+            А вот мой  
+            старый <a href="https://portfolio.sepezho.com">сайт</a> портфолио.<br />Загляни если интересно :)
           </span>
         </div>
-        <span>
-          Created by Sepezho 2020
+        <span className={s.signature}>
+          <p>Created by Sepezho 2020</p>
+          <p className={s.lastSignature}>edit 2021</p>
         </span>
       </div>
     </div>

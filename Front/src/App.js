@@ -3,15 +3,16 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { store } from './Store/Store';
 
-import './Style/App.sass';
+import GetInstData from './Logics/GetInstData';
+import GetGitData from './Logics/GetGitData';
+import GetViewsData from './Logics/GetViewsData';
 
 import Header from './Components/Header/';
 import Info from './Components/Info/';
 import Portfolio from './Components/Portfolio/';
 import Footer from './Components/Footer/';
 
-import GetInstData from './Logics/GetInstData';
-import GetInstDataFunc from './Logics/GetViews';
+import './Style/App.sass';
 
 const App = () => {
   return (
@@ -22,7 +23,20 @@ const App = () => {
       <Footer />
 
       <GetInstData />
-      <GetInstDataFunc />
+      <GetGitData />
+      <GetViewsData />
+      
+      {/* FOR SLIDER */}
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      />
     </Provider>
   );
 }

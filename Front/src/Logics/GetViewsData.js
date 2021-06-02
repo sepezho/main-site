@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { UpdateViews } from '../Store/Actions/UpdateViewsAction';
 
-const UpdateViewsFunc = (props) => {
+const GetViewsData = (props) => {
   const fetchUrl = () => {
     fetch('https://api-metrika.yandex.net/analytics/v3/data/ga?end-date=today&ids=ga%3A74727217&metrics=ga%3Apageviews&start-date=2021-03-25', {
       method: 'GET',
@@ -27,4 +27,4 @@ const mapDispatchToProps = (dispatch) => {
     UpdateViews: (views) => dispatch(UpdateViews(views)),
   };
 };
-export default connect(null, mapDispatchToProps)(UpdateViewsFunc);
+export default connect(null, mapDispatchToProps)(GetViewsData);

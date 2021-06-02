@@ -27,7 +27,7 @@ function Text() {
       Ах да, чуть не забыл. Мне 17 лет, я школьник 11-го класса.
       Сейчас активно веду <a href={'https://t.me/sepezho_log'}>телеграм</a> канал
       и <a href={'https://www.instagram.com/sepezho'}>инсту</a>. Но и остальные ссылки <span className={s.secondaryText}>({
-        useResponsive('(min-width: 1024px)', true) ? 'сбоку' : 'снизу'
+        useResponsive('(min-width: 1024px)', true) ? 'сбоку' : 'сверху'
       })</span> можешь посмотреть.
       <p>Удачи тебе :)</p>
     </div>

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { UpdateInstData } from '../Store/Actions/UpdateInstDataAction';
 
-const GetInstDataFunc = (props) => {
+const GetInstData = (props) => {
   fetch('https://sepezho.com:8888/API/GetInstData', {
     method: 'GET'
   })
@@ -22,4 +22,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(GetInstDataFunc);
+export default connect(null, mapDispatchToProps)(GetInstData);
