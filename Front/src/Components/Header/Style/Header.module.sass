@@ -11,6 +11,12 @@ a
   flex-direction: column
 
 .container
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+.headerContainer
   padding: 5px 35px 5px 35px
   margin: 48px 0 24px 0
   border-radius: 100px
@@ -56,19 +62,58 @@ a
   margin: -5px 0 0 0
   text-align: right
 
-.viewsContainer
+.subHeaderContainer
+  display: flex
+  width: 100%
+  justify-content: space-around
+  margin: 0 0 24px 0
+
+.viewsContainer, .likeContainer
   padding: 4px 16px
   border-radius: 100px
-  box-shadow: $awesome-shadow
   img
     width: 16px
     height: 16px
     margin: 2.25px 12px -2.25px 0
 
+.viewsContainer
+  box-shadow: $awesome-shadow
+
+.likeContainer
+  padding-top: 10px
+  display: flex
+  align-items: center
+  overflow: hidden
+  user-select: none
+  cursor: pointer
+  img
+    margin: -7.75px 12px 0 0
+
+.likeIcon
+  margin-right: 4px !important
+  display: flex
+  flex-direction: column
+  transition: .7s
+  
+.messageContainer
+  transition: .7s
+  box-shadow: 0 2.8px 2.2px #e6fffa, 0 6.7px 5.3px #e6fffa, 0 12.5px 10px #e6fffa, 0 22.3px 17.9px #e6fffa, 0 41.8px 33.4px #e6fffa, 0 100px 80px #e6fffa
+  padding: 4px 16px
+  border-radius: 100px
+  color: $header-status-color
+  font-family: 'Gilroy ThinItalic'
+  margin: 0 auto -24px auto
+  min-height: 18px
+
+@media screen and (max-width: 1024px)
+  .messageContainer
+    margin: 0 auto -12px auto
+
 @media screen and (max-width: 450px)
   .root
     width: 100%
-  .container
+
+  .headerContainer
     width: 100%
     margin: 0 0 24px 0
     padding: 16px 0 0 0
@@ -77,7 +122,9 @@ a
     flex-direction: column
     p
       margin: 12px 0
+
   .title
     text-align: center
+
   .subTitle
     text-align: center

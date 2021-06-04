@@ -6,6 +6,10 @@ export const initialState = {
     username: 'loading',
   },
   views: 'loading...',
+  likesData: {
+    Likes: 'loading...',
+    IsLiked: false
+  },
   gitData: [],
 };
 
@@ -17,6 +21,9 @@ export function reducer(state = initialState, action) {
     case 'UPDATE_GIT_DATA':
       return { ...state, gitData: action.payload };
   
+    case 'UPDATE_LIKES_DATA':
+      return { ...state, likesData: action.payload };
+        
     case 'UPDATE_VIEWS':
       return { ...state, views: action.payload };
   

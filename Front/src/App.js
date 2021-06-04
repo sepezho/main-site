@@ -5,6 +5,7 @@ import { store } from './Store/Store';
 
 import GetInstData from './Logics/GetInstData';
 import GetGitData from './Logics/GetGitData';
+import GetLikesData from './Logics/GetLikesData';
 import GetViewsData from './Logics/GetViewsData';
 
 import Header from './Components/Header/';
@@ -24,6 +25,7 @@ const App = () => {
 
       <GetInstData />
       <GetGitData />
+      <GetLikesData />
       <GetViewsData />
       
       {/* FOR SLIDER */}

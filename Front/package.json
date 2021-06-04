@@ -6,6 +6,7 @@
     "antd": "^4.16.0",
     "dayjs": "^1.10.5",
     "eslint": "^7.26.0",
+    "lodash": "^4.17.21",
     "node-sass": "^6.0.0",
     "react": "^17.0.2",
     "react-cool-img": "^1.2.9",
