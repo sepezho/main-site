@@ -11,17 +11,171 @@ import ClickerCover from '../../../Static/Img/Portfolio/ClickerCover.png';
 import SepCashCover from '../../../Static/Img/Portfolio/SepCashCover.png';
 
 const bubblesData = [
-  {key: 0, cover: PumpyFarmCover, isCommercial: true, size: 300, style: {margin: '0 310px 0 0'}},
-  {key: 1, cover: WebStapCover, isCommercial: true, size: 300, style: {margin: '90px 0 0 310px'}},
-  {key: 2, cover: BoosterGamesCover, isCommercial: true, size: 300, style: {margin: '310px 150px 0 0'}},
-  {key: 3, cover: AdminPanelCover, isCommercial: true, size: 200, style: {margin: '397.5px 0 0 385px'}},
-  {key: 4, cover: GitDocksCover, isCommercial: true, size: 150, style: {margin: '570px 0 0 160px'}},
-  {key: 5, cover: ClickerCover, isCommercial: false, size: 190, style: {margin: '600px 0 0 505px'}},
-  {key: 6, cover: WayCover, isCommercial: false, size: 150, style: {margin: '621px 167px 0 0'}},
-  {key: 7, cover: GameOfLifeCover, isCommercial: false, size: 200, style: {margin: '544px 522px 0 0'}},
-  {key: 8, cover: PortfolioCover, isCommercial: false, size: 300, style: {margin: '730px 0 0 150px'}},
-  {key: 9, cover: SepCashCover, isCommercial: false, size: 200, style: {margin: '745px 388px 0 0'}},
-  {key: 10, cover: SeppassCover, isCommercial: false, size: 300, style: {margin: '952px 304px 0 0'}},
+  {
+    key: 0,
+    cover: PumpyFarmCover,
+    isCommercial: true,
+    size: 300,
+    cardData: {
+      images: [PumpyFarmCover, WebStapCover],
+      dateFrom: '15.03.2021',
+      dateTo: '04.05.2021',
+      title: 'Pumpy.farm',
+      text: <div>Этот сайт я разрабатывал туда сюда... тыры пыры...</div>,
+      used: 'React; Redux; Web3; TypeScript',
+      links: ['https://pumpy.farm', 'https://pumpy.farm'],
+    }
+  },
+  {
+    key: 1,
+    cover: WebStapCover,
+    isCommercial: true,
+    size: 300,
+    cardData: {
+      images: [],
+      dateFrom: '',
+      dateTo: '',
+      title: 'WebStapCover',
+      text: '',
+      used: '',
+      links: [],
+    }
+  },
+  {
+    key: 2,
+    cover: BoosterGamesCover,
+    isCommercial: true,
+    size: 300,
+    cardData: {
+      images: [],
+      dateFrom: '',
+      dateTo: '',
+      title: 'BoosterGamesCover',
+      text: '',
+      used: '',
+      links: [],
+    }
+  },
+  {
+    key: 3,
+    cover: AdminPanelCover,
+    isCommercial: true,
+    size: 200,
+    cardData: {
+      images: [],
+      dateFrom: '',
+      dateTo: '',
+      title: 'AdminPanelCover',
+      text: '',
+      used: '',
+      links: [],
+    }
+  },
+  {
+    key: 4,
+    cover: GitDocksCover,
+    isCommercial: true,
+    size: 150,
+    cardData: {
+      images: [],
+      dateFrom: '',
+      dateTo: '',
+      title: 'GitDocksCover',
+      text: '',
+      used: '',
+      links: [],
+    }
+  },
+  {
+    key: 5,
+    cover: ClickerCover,
+    isCommercial: false,
+    size: 190,
+    cardData: {
+      images: [],
+      dateFrom: '',
+      dateTo: '',
+      title: 'ClickerCover',
+      text: '',
+      used: '',
+      links: [],
+    }
+  },
+  {
+    key: 6,
+    cover: WayCover,
+    isCommercial: false,
+    size: 150,
+    cardData: {
+      images: [],
+      dateFrom: '',
+      dateTo: '',
+      title: 'WayCover',
+      text: '',
+      used: '',
+      links: [],
+    }
+  },
+  {
+    key: 7,
+    cover: GameOfLifeCover,
+    isCommercial: false,
+    size: 200,
+    cardData: {
+      images: [],
+      dateFrom: '',
+      dateTo: '',
+      title: 'GameOfLifeCover',
+      text: '',
+      used: '',
+      links: [],
+    }
+  },
+  {
+    key: 8,
+    cover: PortfolioCover,
+    isCommercial: false,
+    size: 300,
+    cardData: {
+      images: [],
+      dateFrom: '',
+      dateTo: '',
+      title: 'PortfolioCover',
+      text: '',
+      used: '',
+      links: [],
+    }
+  },
+  {
+    key: 9,
+    cover: SepCashCover,
+    isCommercial: false,
+    size: 200,
+    cardData: {
+      images: [],
+      dateFrom: '',
+      dateTo: '',
+      title: 'SepCashCover',
+      text: '',
+      used: '',
+      links: [],
+    }
+  },
+  {
+    key: 10,
+    cover: SeppassCover,
+    isCommercial: false,
+    size: 300,
+    cardData: {
+      images: [],
+      dateFrom: '',
+      dateTo: '',
+      title: 'SeppassCover',
+      text: '',
+      used: '',
+      links: [],
+    }
+  },
 ]
 
 const bubblesStyle = [

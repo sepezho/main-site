@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 import {connect} from 'react-redux';
 import Waiting from '../../../Static/Img/Icons/Slider/Waiting.svg';
+import PostLikesData from '../../../Logics/PostLikesData';
 
 import s from '../Style/Header.module.sass';
 
-const debounce = require('lodash/throttle')
+// const throttle = require('lodash/throttle')
+
+// throttle replacement :)
+let click = true
 
 const Like = (props) => {
   const awesomeShadow = '0 2.8px 2.2px rgba(0, 0, 0, 0.0034), 0 6.7px 5.3px rgba(0, 0, 0, 0.0048), 0 12.5px 10px rgba(0, 0, 0, 0.006), 0 22.3px 17.9px rgba(0, 0, 0, 0.0072), 0 41.8px 33.4px rgba(0, 0, 0, 0.0086), 0 100px 80px rgba(0, 0, 0, 0.012)'
@@ -27,25 +31,30 @@ const Like = (props) => {
 
   const likeAction = () => {
     if (!props.isLiked && likes === props.likes) {
-      fetch("https://sepezho.com:7777/API/likes", {
-        method: "POST"
-      });
+      PostLikesData()
       setLikes(props.likes+1)
       setEmoji('-100px 0 -92px 0')//ok
       setShadow(awesomeShadowLiked)
       props.setMessage({message: 'thx!'})
-
+      // throttle replacement :)
+      click = false
+      setTimeout(()=>{
+        click = true
+      },3000)
     } else {
       props.setMessage({message: 'But u can`t unlike ahaha'})
       setEmoji('-100px 0 -42px 0')//fuck
+      // throttle replacement :)
+      click = false
       setTimeout(()=>{
+        click = true
         setEmoji('-100px 0 -92px 0')
-      },3000)//back to ok
+      },3000) //back to ok
     }
   }
 
   return (
-    <div className={s.likeContainer} style={{boxShadow: shadow}} onClick={debounce(likeAction, 3000)}>
+    <div className={s.likeContainer} style={{boxShadow: shadow}} onClick={()=>click ? likeAction() : null}>
       {
         props.likes === 'loading...' ?
           <img src={Waiting} className={s.waiting} alt="" />

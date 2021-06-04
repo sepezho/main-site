@@ -14,7 +14,7 @@ import {
 
 import s from './Style/Bubbles.module.sass';
 
-const Bubbles = () => {
+const Bubbles = props => {
   const isMobile = useResponsive('(min-width: 1024px)', true)
   const [bubblesData, updateBubblesData] = useState([...compressedBubbles, ...compressedSmallBubbles])
   
@@ -33,7 +33,7 @@ const Bubbles = () => {
     >
       <div className={s.bubblesContainer}>
         {bubblesData.map(e=>
-          <Bubble {...e} />
+          <Bubble {...e} setBubbleCardOpen={props.setBubbleCardOpen}/>
         )}
 
         <div className={s.workedOn}>

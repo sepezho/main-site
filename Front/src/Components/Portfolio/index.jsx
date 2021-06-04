@@ -4,11 +4,11 @@ import Tables from './Tables';
 
 import s from './Style/Portfolio.module.sass';
 
-const Portfolio = () => {
+const Portfolio = props => {
   return (
     <div className={s.container}>
       <div className={s.centerContainer}>
-        <Bubbles />
+        <Bubbles setBubbleCardOpen={props.setBubbleCardOpen}/>
         <Tables />
       </div>
     </div>
