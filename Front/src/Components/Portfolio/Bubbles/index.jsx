@@ -10,7 +10,7 @@ import {
   smallMobileBubbles,
   bubblesLegend,
   mobileBubblesLegend
-} from './bubblesData';
+} from './bubblesData/';
 
 import s from './Style/Bubbles.module.sass';
 

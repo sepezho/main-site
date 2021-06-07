@@ -23,8 +23,17 @@ const SliderModule = (props) => {
     autoplay: true,
     autoplaySpeed: 7000,
   };  
-  
+  let newArr = []
   const renderSlide = instPost => {
+    let newData = {}
+    newData.id = instPost.id
+    newData.img = instPost.thumbnail_resources[2].src
+    newData.date = instPost.accessibility_caption
+    newData.likedCount = instPost.edge_liked_by.count
+    newData.commentCount = instPost.edge_media_to_comment.count
+    newData.text = instPost.edge_media_to_caption.edges[0]?.node.text
+    newArr.push(newData)
+    console.log(JSON.stringify(newArr))
     return(
         <div key={instPost.id} className={s.Slide}>
           <RenderImg url={instPost.thumbnail_resources[2].src} />
@@ -70,7 +79,7 @@ const SliderModule = (props) => {
     if (props.instData.edge_owner_to_timeline_media?.edges[0]) {
       return (
         <Slider className={s.SliderContainer} {...settings}>
-          {props.instData.edge_owner_to_timeline_media.edges.filter(e => !e.node.is_video).map((e) => e.node).slice(0, 10).map(e => renderSlide(e))}
+          {props.instData.edge_owner_to_timeline_media.edges.filter(e => !e.node.is_video).map((e) => e.node).slice(0, 11).map(e => renderSlide(e))}
         </Slider>
       );
     }

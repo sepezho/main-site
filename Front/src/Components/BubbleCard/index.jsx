@@ -56,9 +56,9 @@ const BubbleCard = props => {
             </div>
           </div>
         </div>
-        <div className={s.links}>
+        {/*<div className={s.links}>
           {props.bubbleCard.links}
-        </div>
+        </div>*/}
       </div>
     </div>
   ) : null
