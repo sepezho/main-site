@@ -6,7 +6,7 @@ import PumpyFarmSlide3 from '../../../../../Static/Img/Portfolio/PumpyFarm/Slide
 import PumpyFarmSlide4 from '../../../../../Static/Img/Portfolio/PumpyFarm/Slide4.png';
 import PumpyFarmSlide5 from '../../../../../Static/Img/Portfolio/PumpyFarm/Slide5.png';
 
-export default {
+const data = {
   key: 0,
   cover: PumpyFarmCover,
   isCommercial: true,
@@ -35,3 +35,5 @@ export default {
     links: ['https://pumpy.farm'],
   }
 }
+
+export default data

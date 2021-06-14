@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { findDOMNode } from 'react-dom';
 
 class Tilt extends Component {
   constructor(props) {
@@ -27,7 +26,7 @@ class Tilt extends Component {
     this.top = null;
     this.transitionTimeout = null;
     this.updateCall = null;
-    this.element = null;
+    this.element = React.createRef();
     this.settings = Object.assign({}, defaultSettings, this.props.options);
     this.reverse = this.settings.reverse ? -1 : 1;
 
@@ -37,8 +36,8 @@ class Tilt extends Component {
     this.onMouseLeave = this.onMouseLeave.bind(this, this.props.onMouseLeave);
   }
   componentDidMount() {
-    this.element = findDOMNode(this);
-    const myNode = this.element;
+    // this.element.current = findDOMNode(this);
+    const myNode = this.element.current;
     setTimeout(() => {
       if (myNode?.parentElement?.querySelector(':hover') === myNode){
         this.onMouseEnter();
@@ -134,9 +133,9 @@ class Tilt extends Component {
   }
 
   updateElementPosition() {
-    const rect = this.element.getBoundingClientRect();
-    this.width = this.element.offsetWidth;
-    this.height = this.element.offsetHeight;
+    const rect = this.element.current.getBoundingClientRect();
+    this.width = this.element.current.offsetWidth;
+    this.height = this.element.current.offsetHeight;
     this.left = rect.left;
     this.top = rect.top;
   }
@@ -159,7 +158,9 @@ class Tilt extends Component {
   render() {
     const style = Object.assign({}, this.props.style, this.state.style)
     return (
-      <div style={style}
+      <div
+        ref={this.element}
+        style={style}
         className={this.props.className}
         onMouseEnter={this.onMouseEnter}
         onMouseMove={this.onMouseMove}

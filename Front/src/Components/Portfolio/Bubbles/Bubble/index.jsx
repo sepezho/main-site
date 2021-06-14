@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import Tilt from '../../../../Logics/Tilt';
 import useResponsive from '../../../../Logics/Responsive';
@@ -19,7 +19,7 @@ const Bubble = props => {
   }
 
   return (
-    <div className={s.container} style={styles}>
+    <div className={s.container} key={props.key} style={styles}>
     {
       props.cover && (
         isMobile ?

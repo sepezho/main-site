@@ -4,17 +4,18 @@ a
   text-decoration: none
 
 .root
-  width: 100%
+  width: 100vw
   display: flex
   justify-content: center
   align-items: center
   flex-direction: column
-
+  
 .container
   display: flex
   justify-content: center
   align-items: center
   flex-direction: column
+  margin: 0 0 18px 0
 
 .headerContainer
   padding: 5px 35px 5px 35px
@@ -86,6 +87,7 @@ a
   overflow: hidden
   user-select: none
   cursor: pointer
+  height: 14px
   img
     margin: -7.75px 12px 0 0
 
@@ -94,6 +96,7 @@ a
   display: flex
   flex-direction: column
   transition: .7s
+  line-height: 28px
   
 .messageContainer
   transition: .7s
@@ -102,18 +105,15 @@ a
   border-radius: 100px
   color: $header-status-color
   font-family: 'Gilroy ThinItalic'
-  margin: 0 auto -24px auto
+  margin: 0 auto -26px auto
   min-height: 18px
   opacity: 0
   
-@media screen and (max-width: 1024px)
-  .messageContainer
-    margin: 0 auto -12px auto
+// @media screen and (max-width: 1024px)
+//   .messageContainer
+//     margin: 0 auto -24px auto
 
 @media screen and (max-width: 450px)
-  .root
-    width: 100%
-
   .container
     width: 100%
     

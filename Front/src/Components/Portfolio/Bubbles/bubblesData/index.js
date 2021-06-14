@@ -77,6 +77,24 @@ const bubblesData = [
   },
   {
     key: 5,
+    cover: WayCover,
+    isCommercial: false,
+    size: 150,
+    cardData: {
+      images: [WayCover],
+      dateFrom: '',
+      dateTo: '',
+      title: 'Way',
+      text: <div>
+        Самописный алгоритм нахождения пути от одной точки до другой,
+        обходя препятствия, написан на canvas. Без серверной части.
+      </div>,
+      used: 'jQuery; Canvas',
+      links: [],
+    }
+  },
+  {
+    key: 6,
     cover: ClickerCover,
     isCommercial: false,
     size: 190,
@@ -97,24 +115,7 @@ const bubblesData = [
       links: [],
     }
   },
-  {
-    key: 6,
-    cover: WayCover,
-    isCommercial: false,
-    size: 150,
-    cardData: {
-      images: [WayCover],
-      dateFrom: '',
-      dateTo: '',
-      title: 'Way',
-      text: <div>
-        Самописный алгоритм нахождения пути от одной точки до другой,
-        обходя препятствия, написан на canvas. Без серверной части.
-      </div>,
-      used: 'jQuery; Canvas',
-      links: [],
-    }
-  },
+
   {
     key: 7,
     cover: GameOfLifeCover,
@@ -199,45 +200,45 @@ const bubblesData = [
 ]
 
 const bubblesStyle = [
-  {margin: '0 310px 0 0'},
-  {margin: '90px 0 0 310px'},
-  {margin: '310px 150px 0 0'},
-  {margin: '397.5px 0 0 385px'},
-  {margin: '570px 0 0 160px'},
-  {margin: '600px 0 0 505px'},
-  {margin: '621px 167px 0 0'},
-  {margin: '544px 522px 0 0'},
-  {margin: '730px 0 0 150px'},
-  {margin: '745px 388px 0 0'},
-  {margin: '952px 304px 0 0'},
+  // {margin: '0 310px 0 0'},
+  // {margin: '90px 0 0 310px'},
+  // {margin: '310px 150px 0 0'},
+  // {margin: '397.5px 0 0 385px'},
+  // {margin: '570px 0 0 160px'},
+  // {margin: '600px 0 0 505px'},
+  // {margin: '621px 167px 0 0'},
+  // {margin: '544px 522px 0 0'},
+  // {margin: '730px 0 0 150px'},
+  // {margin: '745px 388px 0 0'},
+  // {margin: '952px 304px 0 0'},
 ]
 
 const compressedBubblesStyle = [
-  {margin: '0 300px 0 0'},
-  {margin: '80px 0 0 300px'},
-  {margin: '300px 140px 0 0'},
-  {margin: '387.5px 0 0 375px'},
-  {margin: '560px 0 0 150px'},
-  {margin: '590px 0 0 495px'},
-  {margin: '611px 157px 0 0'},
-  {margin: '534px 512px 0 0'},
-  {margin: '720px 0 0 140px'},
-  {margin: '735px 378px 0 0'},
-  {margin: '942px 294px 0 0'},
+  {margin: '0 0 -200px 500px'}, // pumpy
+  {margin: '0 0 -80px 100px'}, //webstap
+  {margin: '0 0 -200px 400px'}, // BoosterGamesCover
+  {margin: '0 0 -300px 100px'}, // AdminPanelCover
+  {margin: '0 0 40px 760px'}, // GitDocksCover
+  {margin: '0 0 -50px 700px'}, // way
+  {margin: '0 0 -100px 300px'}, // clicker
+  {margin: '0 0 -150px 0'}, // GameOfLifeCover
+  {margin: '0 0 -200px 450px'}, // PortfolioCover
+  {margin: '0 0 20px 200px'}, // sepcash
+  {margin: '0 0 -2000px 300px'}, // seppass
 ]
 
 const mobileBubblesStyle = [
-  {margin: '0 0 0 70px'},
-  {margin: '300px 70px 0 0'},
-  {margin: '610px 0 0 50px'},
-  {margin: '920px 0 0 150px'},
-  {margin: '890px 220px 0 0'},
-  {margin: '1060px 170px 0 0'},
-  {margin: '1190px 0 0 160px'},
-  {margin: '1260px 180px 0 0'},
-  {margin: '1590px 70px 0 0'},
-  {margin: '1400px 0 0 170px'},
-  {margin: '1890px 0 0 70px'},
+  {margin: '0 0 0 80px'},
+  {margin: '0 0 0 0'},
+  {margin: '0 0 -20px 80px'},
+  {margin: '0 0 -170px 0'},
+  {margin: '0 0 0 230px'},
+  {margin: '0 0 -30px 150px'},
+  {margin: '0 0 -80px 0'},
+  {margin: '0 0 -10px 180px'},
+  {margin: '0 0 -10px 0'},
+  {margin: '0 0 -20px 180px'},
+  {margin: '0 0 -1800px 0'},
 ]
 
 export const bubbles = bubblesData.map(e => {
@@ -259,7 +260,7 @@ export const mobileBubbles = bubblesData.map(e => {
 })
 
 export const smallBubbles =  [
-  {key: 11, cover: false, isCommercial: true, size: 70, style: {margin: '320px 530px 0 0'}},
+  {key: 11, cover: false, isCommercial: true, size: 70, style: {margin: '300px 0 0 0'}},
   {key: 12, cover: false, isCommercial: true, size: 50, style: {margin: '420px 730px 0 0'}},
   {key: 13, cover: false, isCommercial: true, size: 30, style: {margin: '400px 0 0 790px'}},
   {key: 14, cover: false, isCommercial: false, size: 30, style: {margin: '820px 780px 0 0'}},
@@ -268,7 +269,7 @@ export const smallBubbles =  [
 ]
 
 export const compressedSmallBubbles = [
-  {key: 11, cover: false, isCommercial: true, size: 60, style: {margin: '300px 500px 0 0'}},
+  {key: 11, cover: false, isCommercial: true, size: 60, style: {margin: '300px 0 0 0'}},
   {key: 12, cover: false, isCommercial: true, size: 40, style: {margin: '400px 650px 0 0'}},
   {key: 13, cover: false, isCommercial: true, size: 25, style: {margin: '380px 0 0 700px'}},
   {key: 14, cover: false, isCommercial: false, size: 25, style: {margin: '800px 750px 0 0'}},
@@ -277,12 +278,12 @@ export const compressedSmallBubbles = [
 ]
 
 export const smallMobileBubbles =  [
-  {key: 11, cover: false, isCommercial: true, size: 70, style: {margin: '230px 260px 0 0'}},
-  {key: 12, cover: false, isCommercial: true, size: 50, style: {margin: '580px 0 0 280px'}},
-  {key: 13, cover: false, isCommercial: true, size: 30, style: {margin: '840px 260px 0 0'}},
-  {key: 14, cover: false, isCommercial: false, size: 30, style: {margin: '1140px 0 0 180px'}},
-  {key: 15, cover: false, isCommercial: false, size: 50, style: {margin: '1840px 0 0 250px'}},
-  {key: 16, cover: false, isCommercial: false, size: 70, style: {margin: '1500px 200px 0 0'}},
+  {key: 11, cover: false, isCommercial: true, size: 70, style: {margin: '80px 0 0 290px'}},
+  {key: 12, cover: false, isCommercial: true, size: 50, style: {margin: '20px 0 0 20px'}},
+  {key: 13, cover: false, isCommercial: true, size: 30, style: {margin: '150px 0 0 40px'}},
+  {key: 14, cover: false, isCommercial: false, size: 30, style: {margin: '370px 0 0 290px'}},
+  {key: 15, cover: false, isCommercial: false, size: 50, style: {margin: '150px 0 0 30px'}},
+  {key: 16, cover: false, isCommercial: false, size: 70, style: {margin: '380px 0 0 60px'}},
 ]
 
 export const bubblesLegend = [

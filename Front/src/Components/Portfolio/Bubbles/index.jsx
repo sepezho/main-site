@@ -28,14 +28,10 @@ const Bubbles = props => {
   return (
     <div
       className={s.container}
-      onMouseEnter={()=> isMobile && updateBubblesData([...bubbles, ...smallBubbles])}
-      onMouseLeave={()=> isMobile && updateBubblesData([...compressedBubbles, ...compressedSmallBubbles])}
+      // onMouseEnter={()=> isMobile && updateBubblesData([...bubbles, ...smallBubbles])}
+      // onMouseLeave={()=> isMobile && updateBubblesData([...compressedBubbles, ...compressedSmallBubbles])}
     >
       <div className={s.bubblesContainer}>
-        {bubblesData.map(e=>
-          <Bubble {...e} setBubbleCardOpen={props.setBubbleCardOpen}/>
-        )}
-
         <div className={s.workedOn}>
           <div className={s.bubblesLegend}>
             {(isMobile ? bubblesLegend : mobileBubblesLegend).slice(0, 2).map(e=>
@@ -46,6 +42,10 @@ const Bubbles = props => {
             Коммерция
           </span>
         </div>
+
+        {bubblesData.map(e=>
+          <Bubble {...e} setBubbleCardOpen={props.setBubbleCardOpen}/>
+        )}
 
         <div className={s.myWorks}>
           <div className={s.bubblesLegend}>
@@ -58,7 +58,7 @@ const Bubbles = props => {
           </span>
         </div>
       </div>
-
+      
       <div className={s.title}>
         PROJECTS
       </div>

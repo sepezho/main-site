@@ -15,10 +15,17 @@ const Tables = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
+    swipe: false,
   };  
 
-  const commitsData = props.gitData.Com?.slice(0, 30)
-  const reposData = props.gitData.Res?.slice(0, 30)
+  const commitsData = props.gitData.Com?.slice(0, 30).map(e=>{
+    e.key = e.UrlCommit
+    return e
+  })
+  const reposData = props.gitData.Res?.slice(0, 30).map(e=>{
+    e.key = e.Url
+    return e
+  })
 
   return (
     <div className={s.container}>

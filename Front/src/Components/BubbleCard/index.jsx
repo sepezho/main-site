@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { connect } from 'react-redux';
-import useResponsive from '../../Logics/Responsive';
+// import useResponsive from '../../Logics/Responsive';
 import { UpdateBubbleCard } from '../../Store/Actions/UpdateBubbleCard'
 
 import s from './Style/BubbleCard.module.sass';
@@ -32,7 +32,7 @@ const BubbleCard = props => {
           </div>
           <div className={s.slider}>
             <Slider className={s.sliderContainer} {...settings}>
-              {props.bubbleCard.images.map(e=><img src={e} href="#"/>)}
+              {props.bubbleCard.images.map(e=><img src={e} alt="#" key={e}/>)}
             </Slider>
           </div>
 

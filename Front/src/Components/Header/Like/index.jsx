@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import {connect} from 'react-redux';
 import Waiting from '../../../Static/Img/Icons/Slider/Waiting.svg';
@@ -17,11 +17,11 @@ const Like = (props) => {
 
   const [likes, setLikes] = useState(props.likes) //big thumbs
   const [shadow, setShadow] = useState(props.isLiked && likes === props.likes ? awesomeShadowLiked : awesomeShadow)
-  const [emoji, setEmoji] = useState(props.isLiked && likes === props.likes ? '-100px 0 -92px 0' : '-56px 0 -100px 0') //ok or big thumbs
+  const [emoji, setEmoji] = useState(props.isLiked && likes === props.likes ? '-110px 0 -95px 0' : '-56px 0 -100px 0') //ok or big thumbs
   
   useEffect(()=>{
     setLikes(props.likes)
-    setEmoji(props.isLiked ? '-100px 0 -92px 0' : '-56px 0 -100px 0')//ok or big thumbs
+    setEmoji(props.isLiked ? '-100px 0 -95px 0' : '-56px 0 -100px 0')//ok or big thumbs
     setShadow(props.isLiked ? awesomeShadowLiked : awesomeShadow)
 
     if (!props.isLiked && props.likes !== 'loading...') {
@@ -33,7 +33,7 @@ const Like = (props) => {
     if (!props.isLiked && likes === props.likes) {
       PostLikesData()
       setLikes(props.likes+1)
-      setEmoji('-100px 0 -92px 0')//ok
+      setEmoji('-100px 0 -95px 0')//ok
       setShadow(awesomeShadowLiked)
       props.setMessage({message: 'thx!'})
       // throttle replacement :)
@@ -48,7 +48,7 @@ const Like = (props) => {
       click = false
       setTimeout(()=>{
         click = true
-        setEmoji('-100px 0 -92px 0')
+        setEmoji('-100px 0 -95px 0')
       },3000) //back to ok
     }
   }

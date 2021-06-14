@@ -10,10 +10,10 @@ import s from './Style/Header.module.sass';
 
 const Header = (props) => {
   const [message, setMessage] = useState({message: ''})
-  const [opacity, setOpacity] = useState(1)
+  const [opacity, setOpacity] = useState(0)
 
   useEffect(()=>{
-    setOpacity(1);
+    setOpacity(message.message ? 1 : 0);
     setTimeout(()=>setOpacity(0),3000)
   }, [message])
 
@@ -48,11 +48,9 @@ const Header = (props) => {
             <span className={s.subTitle}>{props.views}</span>
           </div>
         </div>
-
         <span className={s.messageContainer} style={{opacity: opacity}}>
           {message.message}
         </span>
-
       </div>
     </div>
   );

@@ -23,6 +23,10 @@ store.dispatch(GetLikesData())
 store.dispatch(GetViewsData())
 
 const App = () => {
+    
+  // need to delete
+  // useEffect(()=>alert('Работа над сайтом еще ведется. Если найдешь неочевидные баги -> пиши в тг (@sepezho)'), [])
+
   return (
     <Provider store={store}>
       <BubbleCard />

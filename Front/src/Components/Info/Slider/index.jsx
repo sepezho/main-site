@@ -23,17 +23,17 @@ const SliderModule = (props) => {
     autoplay: true,
     autoplaySpeed: 7000,
   };  
-  let newArr = []
+  // let newArr = []
   const renderSlide = instPost => {
-    let newData = {}
-    newData.id = instPost.id
-    newData.img = instPost.thumbnail_resources[2].src
-    newData.date = instPost.accessibility_caption
-    newData.likedCount = instPost.edge_liked_by.count
-    newData.commentCount = instPost.edge_media_to_comment.count
-    newData.text = instPost.edge_media_to_caption.edges[0]?.node.text
-    newArr.push(newData)
-    console.log(JSON.stringify(newArr))
+    // let newData = {}
+    // newData.id = instPost.id
+    // newData.img = instPost.thumbnail_resources[2].src
+    // newData.date = instPost.accessibility_caption
+    // newData.likedCount = instPost.edge_liked_by.count
+    // newData.commentCount = instPost.edge_media_to_comment.count
+    // newData.text = instPost.edge_media_to_caption.edges[0]?.node.text
+    // newArr.push(newData)
+    // console.log(JSON.stringify(newArr))
     return(
         <div key={instPost.id} className={s.Slide}>
           <RenderImg url={instPost.thumbnail_resources[2].src} />

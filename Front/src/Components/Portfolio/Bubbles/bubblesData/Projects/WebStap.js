@@ -1,6 +1,6 @@
 import WebStapCover from '../../../../../Static/Img/Portfolio/WebStapCover.png';
 
-export default {
+const data = {
   key: 1,
   cover: WebStapCover,
   isCommercial: true,
@@ -22,3 +22,5 @@ export default {
     links: [],
   }
 }
+
+export default data

@@ -4,16 +4,14 @@
   display: flex
   justify-content: center
   margin: 48px 0
-  height: 1250px
+  // height: 1250px
   transition-timing-function: ease-in-out
 
 .bubblesContainer
   position: relative
-  display: flex
-  justify-content: center
   width: 1024px
-  > *
-    position: absolute
+  // background: green
+  // height: 1250px
 
 .title
   height: 1250px
@@ -26,48 +24,42 @@
 
 .workedOn, .myWorks
   font-family: 'Gilroy BlackItalic'
-  position: absolute
   font-size: 16pt
-  right: 30px
+  // right: 30px
 
 .workedOn
   color: #BAE5D6
-  margin-bottom: 30px 
-  top: 100px
+  // margin-bottom: 30px 
+  // top: 100px
   transform: rotate(45deg)
 
 .myWorks
   color: #F8C9D5
-  bottom: 100px
+  // bottom: 100px
   transform: rotate(-45deg)
 
 .bubblesLegend
-  position: absolute  
+  position: absolute
 
 @media screen and (max-width: 1024px)
-  .title
-    height: auto
-    font-size: 36pt
-    writing-mode: horizontal-tb
-    margin: -100px 0 0 0
-
-  .bubblesContainer
-    margin: 50px 0 0 0
-
   .container
-    height: 2250px
-    flex-direction: column
+    flex-direction: column-reverse
     align-items: center
     justify-content: flex-start
+  
+  .title
+    font-size: 36pt
+    writing-mode: horizontal-tb
+    height: auto
+
+  .bubblesContainer
+    margin: 50px 0 50px 0
+    width: 380px
+    height: 2250px
 
   .workedOn
-    top: 60px
-    margin: 0 120px 0 0
-    right: 50%
-    transform: rotate(-45deg) translate(50%)
+    margin: -40px 50px 40px -50px
+    transform: rotate(-45deg)
 
   .myWorks
-    top: 2100px
-    margin: 0 100px 0 0
-    right: 50%
-    transform: rotate(45deg) translate(50%)
+    margin: 230px -220px 0 220px
