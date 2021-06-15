@@ -4,9 +4,11 @@ import useResponsive from '../../../Logics/Responsive';
 import {
   bubbles,
   compressedBubbles,
+  laptopBubbles,
   mobileBubbles,
   smallBubbles,
   compressedSmallBubbles,
+  smallLaptopBubbles,
   smallMobileBubbles,
   bubblesLegend,
   mobileBubblesLegend
@@ -15,15 +17,19 @@ import {
 import s from './Style/Bubbles.module.sass';
 
 const Bubbles = props => {
-  const isMobile = useResponsive('(min-width: 1024px)', true)
+  const isLaptop = useResponsive('(min-width: 1024px)', true)
+  const isMobile = useResponsive('(min-width: 450px)', true)
   const [bubblesData, updateBubblesData] = useState([...compressedBubbles, ...compressedSmallBubbles])
   
   useEffect(()=>updateBubblesData(
-    !isMobile ?
-      [...mobileBubbles, ...smallMobileBubbles]
+    !isLaptop ?
+      !isMobile ?
+        [...mobileBubbles, ...smallMobileBubbles]
+      :
+        [...laptopBubbles, ...smallLaptopBubbles]
     :
       [...compressedBubbles, ...compressedSmallBubbles]
-  ), [isMobile])
+  ), [isLaptop, isMobile])
 
   return (
     <div
@@ -34,7 +40,7 @@ const Bubbles = props => {
       <div className={s.bubblesContainer}>
         <div className={s.workedOn}>
           <div className={s.bubblesLegend}>
-            {(isMobile ? bubblesLegend : mobileBubblesLegend).slice(0, 2).map(e=>
+            {(isLaptop ? bubblesLegend : mobileBubblesLegend).slice(0, 2).map(e=>
               <Bubble {...e} />
             )}
           </div>
@@ -44,12 +50,12 @@ const Bubbles = props => {
         </div>
 
         {bubblesData.map(e=>
-          <Bubble {...e} setBubbleCardOpen={props.setBubbleCardOpen}/>
+          <Bubble {...e} setBubbleCardOpen={props.setBubbleCardOpen} />
         )}
 
         <div className={s.myWorks}>
           <div className={s.bubblesLegend}>
-            {(isMobile ? bubblesLegend : mobileBubblesLegend).slice(2).map(e=>
+            {(isLaptop ? bubblesLegend : mobileBubblesLegend).slice(2).map(e=>
               <Bubble {...e} />
             )}
           </div>

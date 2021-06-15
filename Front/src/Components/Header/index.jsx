@@ -14,7 +14,7 @@ const Header = (props) => {
 
   useEffect(()=>{
     setOpacity(message.message ? 1 : 0);
-    setTimeout(()=>setOpacity(0),3000)
+    if (message.message) setTimeout(()=>setOpacity(0),3000)
   }, [message])
 
   return (

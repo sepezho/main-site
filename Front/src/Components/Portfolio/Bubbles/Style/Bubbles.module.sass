@@ -4,17 +4,14 @@
   display: flex
   justify-content: center
   margin: 48px 0
-  // height: 1250px
   transition-timing-function: ease-in-out
 
 .bubblesContainer
   position: relative
   width: 1024px
-  // background: green
-  // height: 1250px
+  height: 1400px
 
 .title
-  height: 1250px
   text-align: center
   position: relative
   font-family: 'Gilroy BlackItalic'
@@ -25,18 +22,16 @@
 .workedOn, .myWorks
   font-family: 'Gilroy BlackItalic'
   font-size: 16pt
-  // right: 30px
 
 .workedOn
   color: #BAE5D6
-  // margin-bottom: 30px 
-  // top: 100px
   transform: rotate(45deg)
+  margin: 50px 0 -50px 800px
 
 .myWorks
   color: #F8C9D5
-  // bottom: 100px
   transform: rotate(-45deg)
+  margin: 0 0 0 790px
 
 .bubblesLegend
   position: absolute
@@ -50,7 +45,6 @@
   .title
     font-size: 36pt
     writing-mode: horizontal-tb
-    height: auto
 
   .bubblesContainer
     margin: 50px 0 50px 0
@@ -63,3 +57,11 @@
 
   .myWorks
     margin: 230px -220px 0 220px
+
+@media screen and (max-width: 450px)
+  .bubblesContainer
+    width: 270px
+    height: 1950px
+
+  .myWorks
+    margin: 140px -120px 0 120px

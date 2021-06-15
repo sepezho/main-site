@@ -13,7 +13,7 @@ let click = true
 
 const Like = (props) => {
   const awesomeShadow = '0 2.8px 2.2px rgba(0, 0, 0, 0.0034), 0 6.7px 5.3px rgba(0, 0, 0, 0.0048), 0 12.5px 10px rgba(0, 0, 0, 0.006), 0 22.3px 17.9px rgba(0, 0, 0, 0.0072), 0 41.8px 33.4px rgba(0, 0, 0, 0.0086), 0 100px 80px rgba(0, 0, 0, 0.012)'
-  const awesomeShadowLiked = '0 2.8px 2.2px #e6fffa, 0 6.7px 5.3px #e6fffa, 0 12.5px 10px #e6fffa, 0 22.3px 17.9px #e6fffa, 0 41.8px 33.4px #e6fffa, 0 100px 80px #e6fffa'
+  const awesomeShadowLiked = '0 1.4px 1.1px #e6fffa, 0 3.35px 2.7px #e6fffa, 0 6px 5px #e6fffa, 0 11.15px 9px #e6fffa, 0 20px 16px #e6fffa, 0 50px 40px #e6fffa'
 
   const [likes, setLikes] = useState(props.likes) //big thumbs
   const [shadow, setShadow] = useState(props.isLiked && likes === props.likes ? awesomeShadowLiked : awesomeShadow)
@@ -25,7 +25,7 @@ const Like = (props) => {
     setShadow(props.isLiked ? awesomeShadowLiked : awesomeShadow)
 
     if (!props.isLiked && props.likes !== 'loading...') {
-      props.setMessage({message: 'U can like it (👍)!'})
+      props.setMessage({message: '👍 u can like it!'})
     }
   }, [props])
 

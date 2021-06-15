@@ -78,13 +78,13 @@ const SliderModule = (props) => {
   const FilledSlider = (props) => {
     if (props.instData.edge_owner_to_timeline_media?.edges[0]) {
       return (
-        <Slider className={s.SliderContainer} {...settings}>
+        <Slider className={s.Slider} {...settings}>
           {props.instData.edge_owner_to_timeline_media.edges.filter(e => !e.node.is_video).map((e) => e.node).slice(0, 11).map(e => renderSlide(e))}
         </Slider>
       );
     }
     return (
-      <Slider {...settings} className={`${s.WaitingSlide} ${s.SliderContainer}`}>
+      <Slider {...settings} className={`${s.WaitingSlide} ${s.Slider}`}>
         <img src={Waiting} alt="" />
       </Slider>
     );
@@ -94,12 +94,14 @@ const SliderModule = (props) => {
       <span className={s.Title}>
         ABOUT ME 
       </span>
-      {
-        useResponsive('(min-width: 1024px)', true) ?
-          <Tilt children={<FilledSlider className={s.SliderContainerItem} instData={props.instData} />} />
-        :
-          <FilledSlider className={s.SliderContainerItem} instData={props.instData} />
-      }
+      <div className={s.SliderContainer}>
+        {
+          useResponsive('(min-width: 1024px)', true) ?
+            <Tilt children={<FilledSlider className={s.SliderContainerItem} instData={props.instData} />} />
+          :
+            <FilledSlider className={s.SliderContainerItem} instData={props.instData} />
+        }
+      </div>
     </div>
   );
 };

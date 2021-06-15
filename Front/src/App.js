@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import { Provider } from 'react-redux';
 import { store } from './Store/Store';
@@ -25,7 +25,7 @@ store.dispatch(GetViewsData())
 const App = () => {
     
   // need to delete
-  // useEffect(()=>alert('Работа над сайтом еще ведется. Если найдешь неочевидные баги -> пиши в тг (@sepezho)'), [])
+  useEffect(()=>alert('Работа над сайтом еще ведется. Тексты с инфой частично не актуальны. Если найдешь неочевидные баги -> пиши в тг (@sepezho)'), [])
 
   return (
     <Provider store={store}>

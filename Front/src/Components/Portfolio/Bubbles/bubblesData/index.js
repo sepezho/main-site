@@ -199,19 +199,19 @@ const bubblesData = [
   },
 ]
 
-const bubblesStyle = [
-  // {margin: '0 310px 0 0'},
-  // {margin: '90px 0 0 310px'},
-  // {margin: '310px 150px 0 0'},
-  // {margin: '397.5px 0 0 385px'},
-  // {margin: '570px 0 0 160px'},
-  // {margin: '600px 0 0 505px'},
-  // {margin: '621px 167px 0 0'},
-  // {margin: '544px 522px 0 0'},
-  // {margin: '730px 0 0 150px'},
-  // {margin: '745px 388px 0 0'},
-  // {margin: '952px 304px 0 0'},
-]
+// const bubblesStyle = [
+//   // {margin: '0 310px 0 0'},
+//   // {margin: '90px 0 0 310px'},
+//   // {margin: '310px 150px 0 0'},
+//   // {margin: '397.5px 0 0 385px'},
+//   // {margin: '570px 0 0 160px'},
+//   // {margin: '600px 0 0 505px'},
+//   // {margin: '621px 167px 0 0'},
+//   // {margin: '544px 522px 0 0'},
+//   // {margin: '730px 0 0 150px'},
+//   // {margin: '745px 388px 0 0'},
+//   // {margin: '952px 304px 0 0'},
+// ]
 
 const compressedBubblesStyle = [
   {margin: '0 0 -200px 500px'}, // pumpy
@@ -227,7 +227,7 @@ const compressedBubblesStyle = [
   {margin: '0 0 -2000px 300px'}, // seppass
 ]
 
-const mobileBubblesStyle = [
+const laptopBubblesStyle = [
   {margin: '0 0 0 80px'},
   {margin: '0 0 0 0'},
   {margin: '0 0 -20px 80px'},
@@ -241,15 +241,35 @@ const mobileBubblesStyle = [
   {margin: '0 0 -1800px 0'},
 ]
 
-export const bubbles = bubblesData.map(e => {
-  let newE = {...e}
-  newE.style = bubblesStyle[newE.key]
-  return newE
-})
+const mobileBubblesStyle = [
+  {margin: '0 0 10px 40px', width: 230, height: 230},
+  {margin: '0 0 10px 0', width: 230, height: 230},
+  {margin: '0 0 0 40px', width: 230, height: 230},
+  {margin: '0 0 -140px 0', width: 150, height: 150},
+  {margin: '0 0 10px 160px', width: 120, height: 120},
+  {margin: '0 0 -70px 150px', width: 120, height: 120},
+  {margin: '0 0 -30px 0', width: 150, height: 150},
+  {margin: '0 0 0 120px', width: 150, height: 150},
+  {margin: '0 0 10px 0', width: 230, height: 230},
+  {margin: '0 0 10px 40px', width: 230, height: 230},
+  {margin: '0 0 -1800px 0', width: 230, height: 230},
+]
+
+// export const bubbles = bubblesData.map(e => {
+//   let newE = {...e}
+//   newE.style = bubblesStyle[newE.key]
+//   return newE
+// })
 
 export const compressedBubbles = bubblesData.map(e => {
   let newE = {...e}
   newE.style = compressedBubblesStyle[newE.key]
+  return newE
+})
+
+export const laptopBubbles = bubblesData.map(e => {
+  let newE = {...e}
+  newE.style = laptopBubblesStyle[newE.key]
   return newE
 })
 
@@ -259,31 +279,40 @@ export const mobileBubbles = bubblesData.map(e => {
   return newE
 })
 
-export const smallBubbles =  [
-  {key: 11, cover: false, isCommercial: true, size: 70, style: {margin: '300px 0 0 0'}},
-  {key: 12, cover: false, isCommercial: true, size: 50, style: {margin: '420px 730px 0 0'}},
-  {key: 13, cover: false, isCommercial: true, size: 30, style: {margin: '400px 0 0 790px'}},
-  {key: 14, cover: false, isCommercial: false, size: 30, style: {margin: '820px 780px 0 0'}},
-  {key: 15, cover: false, isCommercial: false, size: 50, style: {margin: '1130px 0 0 230px'}},
-  {key: 16, cover: false, isCommercial: false, size: 70, style: {margin: '930px 0 0 700px'}},
-]
+// export const smallBubbles =  [
+//   {key: 11, cover: false, isCommercial: true, size: 70, style: {margin: '0 0 0 0'}},
+//   {key: 12, cover: false, isCommercial: true, size: 50, style: {margin: '0 0 0 0'}},
+//   {key: 13, cover: false, isCommercial: true, size: 30, style: {margin: '0 0 0 0'}},
+//   {key: 14, cover: false, isCommercial: false, size: 30, style: {margin: '0 0 0 0'}},
+//   {key: 15, cover: false, isCommercial: false, size: 50, style: {margin: '0 0 0 0'}},
+//   {key: 16, cover: false, isCommercial: false, size: 70, style: {margin: '0 0 0 0'}},
+// ]
 
 export const compressedSmallBubbles = [
-  {key: 11, cover: false, isCommercial: true, size: 60, style: {margin: '300px 0 0 0'}},
-  {key: 12, cover: false, isCommercial: true, size: 40, style: {margin: '400px 650px 0 0'}},
-  {key: 13, cover: false, isCommercial: true, size: 25, style: {margin: '380px 0 0 700px'}},
-  {key: 14, cover: false, isCommercial: false, size: 25, style: {margin: '800px 750px 0 0'}},
-  {key: 15, cover: false, isCommercial: false, size: 40, style: {margin: '1100px 0 0 200px'}},
-  {key: 16, cover: false, isCommercial: false, size: 60, style: {margin: '900px 0 0 650px'}},
+  {key: 11, cover: false, isCommercial: true, size: 70, style: {margin: '610px 0 0 200px'}},
+  {key: 12, cover: false, isCommercial: true, size: 50, style: {margin: '300px 0 0 50px'}},
+  {key: 13, cover: false, isCommercial: true, size: 30, style: {margin: '100px 0 0 900px'}},
+  {key: 14, cover: false, isCommercial: false, size: 30, style: {margin: '300px 0 0 800px'}},
+  {key: 15, cover: false, isCommercial: false, size: 50, style: {margin: '200px 0 0 750px'}},
+  {key: 16, cover: false, isCommercial: false, size: 70, style: {margin: '100px 0 0 100px'}},
 ]
 
-export const smallMobileBubbles =  [
+export const smallLaptopBubbles =  [
   {key: 11, cover: false, isCommercial: true, size: 70, style: {margin: '80px 0 0 290px'}},
   {key: 12, cover: false, isCommercial: true, size: 50, style: {margin: '20px 0 0 20px'}},
   {key: 13, cover: false, isCommercial: true, size: 30, style: {margin: '150px 0 0 40px'}},
   {key: 14, cover: false, isCommercial: false, size: 30, style: {margin: '370px 0 0 290px'}},
   {key: 15, cover: false, isCommercial: false, size: 50, style: {margin: '150px 0 0 30px'}},
   {key: 16, cover: false, isCommercial: false, size: 70, style: {margin: '380px 0 0 60px'}},
+]
+
+export const smallMobileBubbles =  [
+  {key: 11, cover: false, isCommercial: true, size: 70, style: {margin: '130px 0 0 220px'}},
+  {key: 12, cover: false, isCommercial: true, size: 50, style: {margin: '200px 0 0 10px'}},
+  {key: 13, cover: false, isCommercial: true, size: 30, style: {margin: '130px 0 0 20px'}},
+  {key: 14, cover: false, isCommercial: false, size: 30, style: {margin: '490px 0 0 230px'}},
+  {key: 15, cover: false, isCommercial: false, size: 50, style: {margin: '200px 0 0 10px'}},
+  {key: 16, cover: false, isCommercial: false, size: 60, style: {margin: '180px 0 0 220px'}},
 ]
 
 export const bubblesLegend = [

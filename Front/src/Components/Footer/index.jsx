@@ -11,8 +11,9 @@ const Footer = () => {
           <div>
             <img src={SrcInst} alt="" />
             <span>
-              Все данные берутся с моего <a href="https://www.instagram.com/sepezho">instagram</a>,
-              при загрузке страницы.
+              Данные берутся с 
+              моего <a href="https://www.instagram.com/sepezho">instagram</a> и <a href="https://github.com/SEPEZHO">gitHub</a> при
+              загрузке страницы.
             </span>
           </div>
           <span>

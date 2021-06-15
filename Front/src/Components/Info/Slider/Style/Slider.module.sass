@@ -9,17 +9,19 @@
 
 .SliderContainer
   margin-right: 24px
+  border-radius: 25px
+  // box-shadow: 0 8px 16px #BAE5D6, inset -0 -8px 16px #BAE5D6
+
+.Slider
   transform-style: preserve-3d
-  position: absolute
-  border-radius: 10px
+  border-radius: 25px
   overflow: hidden
   width: 300px
   height: 300px
-  transition: .5s 
-  box-shadow: rgba(50, 50, 93, 0.2) 0px 30px 50px -20px, rgba(0, 0, 0, 0.25) 0px 30px 60px -30px
-  &:hover
-    box-shadow: rgba(50, 50, 93, 0.17) 0px 20px 30px -17px, rgba(0, 0, 0, 0.20) 0px 20px 40px -20px
+  box-shadow: rgba(50, 50, 93, 0.17) 0px 20px 30px -17px, rgba(0, 0, 0, 0.20) 0px 20px 40px -20px
 
+  // &:hover
+  //   box-shadow: rgba(50, 50, 93, 0.17) 0px 20px 30px -17px, rgba(0, 0, 0, 0.20) 0px 20px 40px -20px
   ul
     width: 100%
     bottom: 5px
@@ -51,10 +53,10 @@
 .Slide
   width: 300px !important
   height: 300px !important
+
   > img
     width: 301px
     height: 301px
-    // border-radius: 10px !important
     margin-top: -1px 
   > div
     position: absolute
@@ -103,8 +105,8 @@
 
   .SliderContainer
     margin-right: 0
-    &:hover
-      box-shadow: rgba(50, 50, 93, 0.2) 0px 30px 50px -20px, rgba(0, 0, 0, 0.25) 0px 30px 60px -30px
+    // &:hover
+      // box-shadow: rgba(50, 50, 93, 0.2) 0px 30px 50px -20px, rgba(0, 0, 0, 0.25) 0px 30px 60px -30px
 
   .Title
     font-size: 36pt

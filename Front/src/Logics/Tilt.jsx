@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+
+// THIS CODE DONT WRITTEN BY ME
+// I DONT RESPONSIBLE FOR THIS SH#T
 class Tilt extends Component {
   constructor(props) {
     super(props);
