@@ -1,0 +1,116 @@
+@import 'src/Style/MainVar.sass'
+
+.container
+  display: flex
+  justify-content: center
+  padding: 24px 0 96px 0
+  overflow: hidden
+  \:global
+    .slick-list
+      overflow: visible
+
+    .slick-dots
+      position: absolute
+      left: 50%
+      transform: translate(-50%)
+      width: auto
+      padding: 8px 16px
+      border-radius: 24px
+      box-shadow: $awesome-shadow
+
+.sliderContainer
+  width: 100vw
+  height: auto
+
+.slideContainer
+  width: 100vw
+  display: flex !important
+  flex-direction: row
+  justify-content: center
+
+.table
+  width: 90%
+  max-width: calc(1024px - 67px)
+
+  \:global
+    .ant-table-container
+      padding: 24px 24px 8px 24px
+      border-radius: 24px
+      box-shadow: $awesome-shadow
+      width: calc(100% - 48px)
+      min-height: 264px
+
+    .ant-table-content
+      overflow: scroll !important
+      table
+        white-space: nowrap
+        min-width: 909px
+        text-align: left
+        margin-bottom: 16px
+
+        thead
+          > tr > th
+            padding: 0 0 12px 0
+            font-family: 'Gilroy BlackItalic'
+            font-size: 16px !important
+
+        td
+          padding: 0 4px
+          font-size: 16px !important
+
+    .ant-pagination
+      margin: 12px 24px -12px 0
+      display: flex
+      list-style-type: none
+      float: right
+      padding: 12px 24px
+      border-radius: 24px
+      box-shadow: $awesome-shadow
+
+    .ant-pagination-item
+      margin: 0 4px
+      cursor: pointer
+
+    .ant-pagination-item:hover, .ant-pagination-item-active
+      text-decoration: underline
+      a
+        color: #8D41D6 !important
+
+    .ant-pagination-prev, .ant-pagination-next
+      display: none
+
+.title
+  padding-top: 28px
+  text-align: left
+  font-family: 'Gilroy BlackItalic'
+  font-size: 40pt
+  color: $slider-title-color
+  writing-mode: vertical-rl
+
+a
+  text-decoration: none
+  color: black
+  &:hover
+    text-decoration: underline
+    color: #8D41D6
+
+@media screen and (max-width: 1024px)
+  .container
+    \:global
+      .slick-dots
+        left: 0
+        transform: translate(0)
+        margin: 0 0 0 calc(5vw + 24px)
+
+  .table
+    \:global
+      .ant-pagination
+        margin: 12px 24px -24px 0
+
+  .slideContainer
+    flex-direction: column-reverse
+    align-items: center
+
+  .title
+    writing-mode: horizontal-tb
+    font-size: 36pt

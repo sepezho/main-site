@@ -1,0 +1,46 @@
+@import 'src/Style/MainVar.sass'
+.container
+  transition: .7s
+
+.sliderContainer
+  transition-timing-function: ease-in-out
+  transform: perspective(1000px)
+  border-radius: 50%
+
+.sliderBlock
+  overflow: hidden
+  border-radius: 50%
+
+.slider
+  overflow: hidden
+  transition: .3s
+  &:hover
+    z-index: 10
+    transform: rotate(2deg)
+  ul
+    bottom: 5px
+
+.card
+  width: 300px
+  div
+    margin: 12px 0
+
+.title
+  text-align: center
+  position: relative
+  font-family: 'Gilroy BlackItalic'
+  font-size: 24pt
+
+.exit
+  position: absolute
+  left: 300px
+  top: -28px
+  img
+    width: 28px
+    z-index: 1
+
+@media screen and (max-width: 1024px)
+  .container
+    &:hover
+      .cover
+        transform: rotate(0)
