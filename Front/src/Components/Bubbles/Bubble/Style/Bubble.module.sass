@@ -1,19 +1,19 @@
 @import 'src/Style/MainVar.sass'
 .container
   transition: .7s
+  *
+    transition: border-radius .3s
 
 .sliderContainer
   transition-timing-function: ease-in-out
   transform: perspective(1000px)
   border-radius: 50%
-
-.sliderBlock
-  overflow: hidden
-  border-radius: 50%
+  transition: .7s
 
 .slider
+  position: relative
   overflow: hidden
-  transition: .3s
+  transition: .4s
   &:hover
     z-index: 10
     transform: rotate(2deg)
@@ -21,16 +21,22 @@
     bottom: 5px
 
 .card
+  position: relative
   width: 300px
+  border-radius: 12px
+  z-index: 100
+  background: white
+  padding: 24px
+  margin: 24px 24px 0 -24px
   div
     margin: 12px 0
 
 .title
-  text-align: center
-  position: relative
+  display: flex
+  justify-content: center
   font-family: 'Gilroy BlackItalic'
   font-size: 24pt
-
+  // text-decoration: underline
 .exit
   position: absolute
   left: 300px
@@ -40,7 +46,21 @@
     z-index: 1
 
 @media screen and (max-width: 1024px)
-  .container
+  .exit
+    left: 340px
+@media screen and (max-width: 450px)
+  .exit
+    left: calc(80vw)
+
+    top: -28px
+  .slider
     &:hover
-      .cover
-        transform: rotate(0)
+      transform: rotate(0)
+  .card
+    width: calc(80vw - 48px)
+  .container
+    // margin-bottom: 400px
+    // position: relative
+    // display: flex
+    // flex-direction: column
+    // justify-content: center

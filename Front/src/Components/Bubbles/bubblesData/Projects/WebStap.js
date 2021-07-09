@@ -1,13 +1,18 @@
-import WebStapCover from "../../../../Static/Img/Portfolio/WebStapCover.png";
+import Cover from "../../../../Static/Img/Portfolio/WebStap/Cover.png";
+import Slide1 from "../../../../Static/Img/Portfolio/WebStap/Slide1.png";
+import Slide2 from "../../../../Static/Img/Portfolio/WebStap/Slide2.png";
+import Slide3 from "../../../../Static/Img/Portfolio/WebStap/Slide3.png";
+import Slide4 from "../../../../Static/Img/Portfolio/WebStap/Slide4.png";
+import Slide5 from "../../../../Static/Img/Portfolio/WebStap/Slide5.png";
 
 const data = {
 	key: 1,
-	images: [WebStapCover, WebStapCover, WebStapCover, WebStapCover],
+	images: [Cover, Slide1, Slide2, Slide3, Slide4, Slide5],
 	isCommercial: true,
 	size: 300,
 	cardData: {
-		dateFrom: "",
-		dateTo: "",
+		dateFrom: "Oct 2020",
+		dateTo: "Dec 2020",
 		title: "Web Stap",
 		text: (
 			<div>
@@ -21,8 +26,8 @@ const data = {
 				занимался мобильной версией сайта.
 			</div>
 		),
-		used: "Gatsby; TypeScript; GraphQl; Styled-components; Figma",
-		links: [],
+		used: "Gatsby; TypeScript; SC",
+		link: "https://gtosss.github.io",
 	},
 };
 

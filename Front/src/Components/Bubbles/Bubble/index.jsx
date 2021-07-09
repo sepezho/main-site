@@ -9,12 +9,21 @@ import exit from "../../../Static/Img/Icons/exit.svg";
 import s from "./Style/Bubble.module.sass";
 
 const Bubble = (props) => {
+	// ЭТО КАКОЙ-ТО КОНКРЕТНЫЙ ГОВНОКОД, ИЗВИНИ
+	// СОВЕТУЮ ВЫКЛЮЧИТЬ IDE ИЛИ УЙТИ СО СТРАНИЧКИ ГИТХАБА НАХЕР
+	// ДАЖЕ НЕ ДУМАЙ ВНИКАТЬ В СУТЬ РАБОТЫ ЭТОГО КОДА!
 	const isMobile = useResponsive("(max-width: 450px)", true);
+	const isLaptop = useResponsive("(max-width: 1024px)", true);
 	const ref = useRef(null);
+	const tiltRef = useRef(null);
 
 	const shadowBubble = `8px 8px 16px ${
 		props.isCommercial ? "#BAE5D6" : "#F8C9D5"
 	}, inset -8px -8px 16px ${props.isCommercial ? "#BAE5D6" : "#F8C9D5"}`;
+	const shadowCard = `8px 8px 16px ${
+		props.isCommercial ? "#BAE5D6" : "#F8C9D5"
+	}`;
+
 	const shadowSmallBubble = `4px 4px 14px ${
 		props.isCommercial ? "#BAE5D6" : "#F8C9D5"
 	}, inset -4px -4px 14px ${props.isCommercial ? "#BAE5D6" : "#F8C9D5"}`;
@@ -25,22 +34,50 @@ const Bubble = (props) => {
 		...props.style,
 	};
 
+	const stylesContainerOpenMobile = {
+		marginLeft: "0 !important",
+		width: "80vw",
+		position: "relative",
+	};
+
+	const stylesContainerOpenLaptop = {
+		marginLeft: "0 !important",
+		position: "relative",
+	};
+
 	const stylesSliderContainer = {
-		width: props.size,
-		height: props.size,
-		marginBottom: props.size < 300 && open ? "140px" : 0,
-		boxShadow: props.size < 100 ? shadowBubble : shadowSmallBubble,
+		width: open
+			? !isMobile
+				? "300px"
+				: "80vw"
+			: !isMobile
+			? props.size
+			: props.style.width,
+		height: open
+			? !isMobile
+				? "300px"
+				: "80vw"
+			: !isMobile
+			? props.size
+			: props.style.height,
+		// marginBottom:
+		// props.size < 300 && open ? (props.size < 190 ? "170px" : "120px") : 0,
+		// boxShadow: props.size < 100 ? shadowBubble : shadowSmallBubble,
+		zIndex: open ? "1000" : "",
+		position: "relative",
 	};
 
 	const settingsClose = {
 		dots: false,
 		arrows: false,
 		slidesToShow: 1,
-		autoplay: false,
+		// autoplay: props.autoplay,
+		autoplay: true,
+		autoplaySpeed: props.speed * 750,
 		swipe: false,
 		speed: 1000,
 	};
-
+	// console.log(settingsClose);
 	const settingsOpen = {
 		dots: true,
 		arrows: false,
@@ -53,18 +90,46 @@ const Bubble = (props) => {
 
 	const stylesSliderOpen = {
 		borderRadius: "12px",
-		width: "300px",
-		height: "300px",
+		transform: "translateZ(0)",
+		width: !isMobile ? "300px" : "80vw",
+		height: !isMobile ? "300px" : "80vw",
 		overflow: "hidden",
+		marginLeft: open && isLaptop && !isMobile ? "40px" : "",
+		marginTop: "70px",
 		boxShadow: props.size > 100 ? shadowBubble : shadowSmallBubble,
 	};
 
 	const stylesSliderClose = {
 		borderRadius: "50%",
-		width: props.size,
-		height: props.size,
+		transform: "translateZ(0)",
+		width: !isMobile ? props.size : props.style.width,
+		height: !isMobile ? props.size : props.style.height,
 		overflow: "hidden",
+		zIndex: "auto",
+
 		boxShadow: props.size > 100 ? shadowBubble : shadowSmallBubble,
+	};
+
+	const stylesCardOpen = {
+		boxShadow: shadowCard,
+		margin:
+			open && isLaptop
+				? !isMobile
+					? props.lastBubble
+						? "24px 0 -128px 16px"
+						: "24px 0 48px 16px"
+					: props.lastBubble
+					? "24px 0 -128px 0"
+					: "24px 0 48px 0"
+				: "",
+		// 	props.size < 300
+		// 	? props.size < 190
+		// 		? "174px 24px 48px -24px"
+		// 		: props.size < 200
+		// 		? "134px 24px 48px -24px"
+		// 		: "124px 24px 48px -24px"
+		// 	: "24px 24px 48px -24px"
+		// :
 	};
 
 	useEffect(() => {
@@ -75,17 +140,33 @@ const Bubble = (props) => {
 		}
 	}, [props.someOneOpen]);
 
+	useEffect(() => {
+		ref?.current?.slickGoTo(0);
+	}, [open]);
+
 	const setOpenFuc = () => {
 		setOpen(true);
 		props.setSomeOneOpen(props.images);
 	};
 
 	if (!open) {
-		ref?.current?.slickGoTo(0);
+		if (tiltRef.current?.style) {
+			tiltRef.current.parentElement.style.transform =
+				"rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+		}
 	}
 
 	return (
-		<div className={s.container} key={props.key} style={stylesContainer}>
+		<div
+			className={s.container}
+			key={props.key}
+			style={
+				open && isLaptop
+					? isMobile
+						? stylesContainerOpenMobile
+						: stylesContainerOpenLaptop
+					: stylesContainer
+			}>
 			<div className={s.sliderContainer} style={stylesSliderContainer}>
 				{isMobile
 					? props.images && (
@@ -99,6 +180,7 @@ const Bubble = (props) => {
 									style={open ? stylesSliderOpen : stylesSliderClose}
 									className={s.sliderBlock}>
 									<Slider
+										ref={ref}
 										className={s.slider}
 										{...(open ? settingsOpen : settingsClose)}
 										style={{
@@ -114,7 +196,7 @@ const Bubble = (props) => {
 					: props.images && (
 							<Tilt
 								children={
-									<>
+									<div ref={tiltRef}>
 										{" "}
 										{open && (
 											<div className={s.exit} onClick={() => setOpen(false)}>
@@ -136,23 +218,27 @@ const Bubble = (props) => {
 												))}
 											</Slider>
 										</div>
-									</>
+									</div>
 								}
 							/>
 					  )}
 			</div>
 			{open && props.cardData && (
-				<div className={s.card}>
+				<div className={s.card} style={stylesCardOpen}>
 					<div className={s.textContainer}>
 						<div className={s.textHeader}>
-							<div
+							<a
+								href={props.cardData.link}
 								className={s.title}
-								style={{ color: props.isCommercial ? "#BAE5D6" : "#F8C9D5" }}>
+								style={{
+									color: props.isCommercial ? "#BAE5D6" : "#F8C9D5",
+									textDecoration: props.cardData.link ? "underline" : "none",
+								}}>
 								{props.cardData.title}
-							</div>
+							</a>
 
 							<div className={s.date}>
-								{props.cardData.dateFrom} to {props.cardData.dateTo}
+								From {props.cardData.dateFrom} To {props.cardData.dateTo}
 							</div>
 						</div>
 

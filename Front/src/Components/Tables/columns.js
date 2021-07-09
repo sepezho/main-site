@@ -21,7 +21,11 @@ export const commitsColumns = [
 		title: "Commit",
 		dataIndex: "Message",
 		key: "commit",
-		render: (text, record) => <a href={record.UrlCommit}>{text}</a>,
+		render: (text, record) => (
+			<a href={record.UrlCommit} className={s.descriptionColumn}>
+				{text}
+			</a>
+		),
 	},
 	{
 		title: "Time",
@@ -56,6 +60,7 @@ export const reposColumns = [
 		title: "Description",
 		dataIndex: "Description",
 		key: "description",
+		render: (text) => <span className={s.descriptionColumn}>{text}</span>,
 	},
 	{
 		title: "Language",

@@ -1,16 +1,33 @@
-import SepCashCover from "../../../../Static/Img/Portfolio/SepCashCover.png";
+import Cover from "../../../../Static/Img/Portfolio/SepCash/Cover.png";
+import Slide1 from "../../../../Static/Img/Portfolio/SepCash/Slide1.png";
 
 const data = {
 	key: 9,
-	images: [SepCashCover],
+	images: [Cover, Slide1],
 	isCommercial: false,
 	size: 200,
 	cardData: {
-		dateFrom: "",
-		dateTo: "",
+		dateFrom: "?",
+		dateTo: "?",
 		title: "Sepcash",
-		text: "SepCash",
-		used: "",
+		text: (
+			<div>
+				Soon...
+				<br />
+				<br />
+				Попозже напишу об этом проекте.
+				<br />
+				<br />
+				P.S Возможно когда-нибудь пост будет в{" "}
+				<a
+					href="https://t.me/sepezho_log"
+					style={{ textDecoration: "underline" }}>
+					тлеге
+				</a>{" "}
+				телеге.
+			</div>
+		),
+		used: "Redux; Webpack; Router; React; Ts; Sass modules and etc",
 		links: [],
 	},
 };

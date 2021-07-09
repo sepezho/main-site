@@ -1,17 +1,61 @@
-import AdminPanelCover from "../../../../Static/Img/Portfolio/AdminPanelCover.png";
+import Cover from "../../../../Static/Img/Portfolio/AdminPanel/Cover.png";
+import Slide1 from "../../../../Static/Img/Portfolio/AdminPanel/Slide1.png";
+import Slide2 from "../../../../Static/Img/Portfolio/AdminPanel/Slide2.png";
+import Slide3 from "../../../../Static/Img/Portfolio/AdminPanel/Slide3.png";
 
 const data = {
 	key: 3,
-	images: [AdminPanelCover],
+	images: [Cover, Slide1, Slide2, Slide3],
 	isCommercial: true,
 	size: 200,
 	cardData: {
-		dateFrom: "",
-		dateTo: "",
+		dateFrom: "Jan 2021",
+		dateTo: "Feb 2021",
 		title: "Admin panel",
-		text: <div>AdminPanelCover</div>,
-		used: "Next; TypeScript; Eslint; GraphQl; Apollo; Figma",
-		links: [],
+		text: (
+			<div>
+				<p>
+					<b>
+						--- Текст из тг{" "}
+						<a
+							href="https://t.me/sepezho_log/636"
+							style={{ textDecoration: "underline" }}>
+							поста
+						</a>{" "}
+						об этом проекте ---{" "}
+					</b>
+				</p>
+				...Один из моих страых коммерческих проектов - относительно простенькая
+				админка. Работал над ней 50 часов с ставкой 200р. Получил свою десятку +
+				опыт работы. Пожали руки, разошлись. Сейчас скачал эту админку,
+				развернул у себя, запустил. Удивительно, но пароль и логин от АДМИНКИ не
+				изменился логин: “админ” пароль: “пароль” прикольно, да?) Зашел в
+				админу, собрался делать скрины под портфолио, а там….. емае как
+				красиво)))) аххаххаххаахха мне не говорили для чего эта админка, а когда
+				я задавал этот вопрос еще в январе, все время уклонялись от ответа. И
+				что я вижу… Я вижу мою админку, наполненную под завязку элитными
+				эскортницами. Номера телефонов, весьма откровенные фото, данные
+				(рост/вес/грудь, у некоторых прописан характер: что любят и тд). Где-то
+				указаны цены и доп опции. После сдачи проекта мною там переименовали
+				некоторые поля, чтоб я не был в курсе. Оплатили мне 10к и попрощались.
+				...
+				<br />
+				<br />А мне даже приятно осознавать, что мой софт активно используют.
+				Причем не просто учет товаров или сотрудников, а заносят туда девушек, 4
+				часа работы которых обойдутся 70+к. Такая вот история. А мораль
+				следующая: меняйте пароли и не врите людям, которых нанимаете...
+				<br />
+				<br />
+				P.S полный текст в{" "}
+				<a
+					href="https://t.me/sepezho_log/636"
+					style={{ textDecoration: "underline" }}>
+					тлеге
+				</a>{" "}
+			</div>
+		),
+		used: "React; Router; Redux; Antd; Lodash; Webpack",
+		link: "https://t.me/sepezho_log/636",
 	},
 };
 

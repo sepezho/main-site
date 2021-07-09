@@ -29,6 +29,8 @@ class Tilt extends Component {
 		this.transitionTimeout = null;
 		this.updateCall = null;
 		this.element = React.createRef();
+		// this.props.setTiltRef(this.element);
+
 		this.settings = Object.assign({}, defaultSettings, this.props.options);
 		this.reverse = this.settings.reverse ? -1 : 1;
 
@@ -46,6 +48,7 @@ class Tilt extends Component {
 			}
 		}, 0);
 	}
+
 	componentWillUnmount() {
 		clearTimeout(this.transitionTimeout);
 		cancelAnimationFrame(this.updateCall);

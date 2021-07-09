@@ -1,26 +1,19 @@
 // PumpyFarm
-import PumpyFarmCover from "../../../../Static/Img/Portfolio/PumpyFarm/Cover.png";
-import PumpyFarmSlide1 from "../../../../Static/Img/Portfolio/PumpyFarm/Slide1.png";
-import PumpyFarmSlide2 from "../../../../Static/Img/Portfolio/PumpyFarm/Slide2.png";
-import PumpyFarmSlide3 from "../../../../Static/Img/Portfolio/PumpyFarm/Slide3.png";
-import PumpyFarmSlide4 from "../../../../Static/Img/Portfolio/PumpyFarm/Slide4.png";
-import PumpyFarmSlide5 from "../../../../Static/Img/Portfolio/PumpyFarm/Slide5.png";
+import Cover from "../../../../Static/Img/Portfolio/PumpyFarm/Cover.png";
+import Slide1 from "../../../../Static/Img/Portfolio/PumpyFarm/Slide1.png";
+import Slide2 from "../../../../Static/Img/Portfolio/PumpyFarm/Slide2.png";
+import Slide3 from "../../../../Static/Img/Portfolio/PumpyFarm/Slide3.png";
+import Slide4 from "../../../../Static/Img/Portfolio/PumpyFarm/Slide4.png";
+import Slide5 from "../../../../Static/Img/Portfolio/PumpyFarm/Slide5.png";
 
 const data = {
 	key: 0,
-	images: [
-		PumpyFarmCover,
-		PumpyFarmSlide1,
-		PumpyFarmSlide2,
-		PumpyFarmSlide3,
-		PumpyFarmSlide4,
-		PumpyFarmSlide5,
-	],
+	images: [Cover, Slide1, Slide2, Slide3, Slide4, Slide5],
 	isCommercial: true,
 	size: 300,
 	cardData: {
-		dateFrom: "15.03.2021",
-		dateTo: "04.05.2021",
+		dateFrom: "Mar 2021",
+		dateTo: "May 2021",
 		title: "Pumpy.farm",
 		text: (
 			<div>
@@ -44,8 +37,8 @@ const data = {
 				стартапа? Это сэд стори... Спрашивай, расскажу.
 			</div>
 		),
-		used: "React; Redux; Web3; TypeScript",
-		links: ["https://pumpy.farm"],
+		used: "React; Redux; Router; Web3; TypeScript",
+		link: "https://pumpy.farm",
 	},
 };
 

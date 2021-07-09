@@ -1,13 +1,17 @@
-import BoosterGamesCover from "../../../../Static/Img/Portfolio/BoosterGamesCover.png";
+import Cover from "../../../../Static/Img/Portfolio/BoosterGames/Cover.png";
+import Slide1 from "../../../../Static/Img/Portfolio/BoosterGames/Slide1.png";
+import Slide2 from "../../../../Static/Img/Portfolio/BoosterGames/Slide2.png";
+import Slide3 from "../../../../Static/Img/Portfolio/BoosterGames/Slide3.png";
+import Slide4 from "../../../../Static/Img/Portfolio/BoosterGames/Slide4.png";
 
 const data = {
 	key: 2,
-	images: [BoosterGamesCover],
+	images: [Cover, Slide1, Slide2, Slide3, Slide4],
 	isCommercial: true,
 	size: 300,
 	cardData: {
-		dateFrom: "",
-		dateTo: "",
+		dateFrom: "May 2020",
+		dateTo: "June 2020",
 		title: "Booster.games",
 		text: (
 			<div>
@@ -22,7 +26,7 @@ const data = {
 			</div>
 		),
 		used: "Next; TypeScript; Eslint; GraphQl; Apollo; Figma",
-		links: [],
+		link: "https://booster.games",
 	},
 };
 

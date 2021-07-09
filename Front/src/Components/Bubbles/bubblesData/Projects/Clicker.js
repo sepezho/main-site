@@ -1,13 +1,15 @@
-import ClickerCover from "../../../../Static/Img/Portfolio/ClickerCover.png";
+import Cover from "../../../../Static/Img/Portfolio/Clicker/Cover.png";
+import Slide1 from "../../../../Static/Img/Portfolio/Clicker/Slide1.png";
+import Slide2 from "../../../../Static/Img/Portfolio/Clicker/Slide2.png";
 
 const data = {
 	key: 6,
-	images: [ClickerCover],
+	images: [Cover, Slide1, Slide2],
 	isCommercial: false,
 	size: 190,
 	cardData: {
-		dateFrom: "",
-		dateTo: "",
+		dateFrom: "May 2019",
+		dateTo: "Aug 2019",
 		title: "Clicker",
 		text: (
 			<div>
@@ -17,10 +19,18 @@ const data = {
 				подвязывал при помощи workerman. Использовал composer для php. Проект
 				закинул на полпути, т.к. он становился слишком громоздким. У него был
 				потенциал, но я был слишком "зелен" для таких обьемов работы...
+				<br />
+				<br />
+				P.S подробнее об этом проекте можешь почтить в{" "}
+				<a
+					href="https://t.me/sepezho_log/645"
+					style={{ textDecoration: "underline" }}>
+					тлеге
+				</a>{" "}
 			</div>
 		),
-		used: "",
-		links: [],
+		used: "jQuery; PHP; MYSQL; WSS; Workerman",
+		link: "https://t.me/sepezho_log/645",
 	},
 };
 
