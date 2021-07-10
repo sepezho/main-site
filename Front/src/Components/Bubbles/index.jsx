@@ -67,16 +67,27 @@ const Bubbles = (props) => {
 	return (
 		<div className={s.container} ref={ref}>
 			<div className={s.bubblesContainer}>
-				{/* <div className={s.workedOn}>
-					<div className={s.bubblesLegend}>
+				<div className={s.workedOn}>
+					{/* <div className={s.bubblesLegend}>
 					 {(!isLaptop ? bubblesLegend : mobileBubblesLegend)
 							.slice(0, 2)
 							.map((e) => (
 								<Bubble {...e} />
 							))} 
-					</div>
+					</div> */}
 					<span>Коммерция</span>
-				</div> */}
+				</div>
+
+				<div className={s.myWorks}>
+					{/* <div className={s.bubblesLegend}>
+						 {(!isLaptop ? bubblesLegend : mobileBubblesLegend)
+							.slice(2)
+							.map((e) => (
+								<Bubble {...e} />
+							))} 
+					</div> */}
+					<span>Pet-проекты</span>
+				</div>
 
 				{bubblesData.map((e) => (
 					<Bubble
@@ -89,17 +100,6 @@ const Bubbles = (props) => {
 						// autoplay={autoplay}
 					/>
 				))}
-
-				{/* <div className={s.myWorks}>
-					<div className={s.bubblesLegend}>
-						 {(!isLaptop ? bubblesLegend : mobileBubblesLegend)
-							.slice(2)
-							.map((e) => (
-								<Bubble {...e} />
-							))} 
-					</div>
-					<span>Pet-проекты</span>
-				</div> */}
 			</div>
 
 			<div className={s.title}>PROJECTS</div>

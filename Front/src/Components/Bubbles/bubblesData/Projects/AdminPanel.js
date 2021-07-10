@@ -50,7 +50,7 @@ const data = {
 				<a
 					href="https://t.me/sepezho_log/636"
 					style={{ textDecoration: "underline" }}>
-					тлеге
+					телеге
 				</a>{" "}
 			</div>
 		),

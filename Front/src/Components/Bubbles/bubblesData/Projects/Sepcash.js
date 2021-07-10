@@ -22,9 +22,9 @@ const data = {
 				<a
 					href="https://t.me/sepezho_log"
 					style={{ textDecoration: "underline" }}>
-					тлеге
-				</a>{" "}
-				телеге.
+					телеге
+				</a>
+				.
 			</div>
 		),
 		used: "Redux; Webpack; Router; React; Ts; Sass modules and etc",

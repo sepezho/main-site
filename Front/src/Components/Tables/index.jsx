@@ -17,14 +17,15 @@ const Tables = (props) => {
 		autoplay: false,
 		swipe: false,
 	};
-
-	const commitsData = props.gitData.Com.slice(0, 30).map((e) => {
-		e.key = e.UrlCommit;
+	let i = 0;
+	const commitsData = [...props.gitData.Com].slice(0, 29).map((e) => {
+		e.key = i++;
 		return e;
 	});
 
-	const reposData = props.gitData.Res.slice(0, 30).map((e) => {
-		e.key = e.Url;
+	let j = 0;
+	const reposData = [...props.gitData.Res].slice(0, 29).map((e) => {
+		e.key = j++;
 		return e;
 	});
 
@@ -36,7 +37,7 @@ const Tables = (props) => {
 						className={s.table}
 						columns={commitsColumns}
 						dataSource={commitsData}
-						pagination={commitsData.length > 10}
+						pagination={commitsData.length > 10 ? { pageSize: 10 } : null}
 					/>
 					<span className={s.title}>COMMITS</span>
 				</div>
@@ -45,7 +46,7 @@ const Tables = (props) => {
 						className={s.table}
 						columns={reposColumns}
 						dataSource={reposData}
-						pagination={reposData.length > 10}
+						pagination={commitsData.length > 10 ? { pageSize: 10 } : null}
 					/>
 					<span className={s.title}>GIT REPOS</span>
 				</div>

@@ -24,7 +24,7 @@ const data = {
 				<a
 					href="https://t.me/sepezho_log/645"
 					style={{ textDecoration: "underline" }}>
-					тлеге
+					телеге
 				</a>{" "}
 			</div>
 		),
