@@ -9,6 +9,7 @@ import GameOfLife from "./Projects/GameOfLife";
 import Portfolio from "./Projects/Portfolio";
 import Sepcash from "./Projects/Sepcash";
 import Seppass from "./Projects/Seppass";
+import CryptoTransfer from "./Projects/CryptoTransfer";
 
 const bubblesData = [
 	Pumpy,
@@ -22,6 +23,7 @@ const bubblesData = [
 	Portfolio,
 	Sepcash,
 	Seppass,
+	CryptoTransfer,
 ];
 
 const bubblesStyle = [
@@ -36,6 +38,7 @@ const bubblesStyle = [
 	{ margin: "0 0 -200px 450px" }, // PortfolioCover
 	{ margin: "0 0 20px 200px" }, // sepcash
 	{ margin: "0 0 -70px 300px" }, // seppass
+	{ margin: "0 0 -70px 900px" }, // CryptoTransfer
 ];
 
 const laptopBubblesStyle = [
@@ -50,6 +53,7 @@ const laptopBubblesStyle = [
 	{ margin: "0 0 -10px 0" },
 	{ margin: "0 0 -20px 180px" },
 	{ margin: "0 0 -150px 0" },
+	{ margin: "0 0 -70px 300px" }, //CryptoTransfer
 ];
 
 const mobileBubblesStyle = [
@@ -64,6 +68,7 @@ const mobileBubblesStyle = [
 	{ margin: "0 0 10px 0", width: 230, height: 230 },
 	{ margin: "0 0 10px 40px", width: 230, height: 230 },
 	{ margin: "0 0 -170px 0", width: 230, height: 230 },
+	{ margin: "0 0 -70px 300px", width: 150, height: 150 }, //CryptoTransfer
 ];
 
 export const bubbles = bubblesData.map((e) => {

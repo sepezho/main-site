@@ -33,7 +33,8 @@ const SliderModule = (props) => {
 		// newData.commentCount = instPost.edge_media_to_comment.count
 		// newData.text = instPost.edge_media_to_caption.edges[0]?.node.text
 		// newArr.push(newData)
-		// console.log(JSON.stringify(newArr))
+		console.log(JSON.stringify(instPost.accessibility_caption));
+
 		return (
 			<div key={instPost.id} className={s.Slide}>
 				<RenderImg url={instPost.thumbnail_resources[2].src} />
@@ -41,12 +42,12 @@ const SliderModule = (props) => {
 					<div>
 						<img src={Calendar} alt="" />
 						<span>
-							{
-								instPost.accessibility_caption
-									.split(".")[0]
-									.split("tagging")[0]
-									.split("on")[1]
-							}
+							{instPost.accessibility_caption
+								? instPost.accessibility_caption
+										.split(".")[0]
+										.split("tagging")[0]
+										.split("on")[1]
+								: "Date not found"}
 						</span>
 					</div>
 					<div>
