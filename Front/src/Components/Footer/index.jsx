@@ -18,7 +18,7 @@ const Footer = () => {
 						</span>
 					</div>
 					<span>
-						А вот мой старый <a href="https://portfolio.sepezho.com">сайт</a>{" "}
+						А вот мой старый <a href="https://superold.sepezho.com">сайт</a>{" "}
 						портфолио.
 						<br />
 						Загляни если интересно :)
